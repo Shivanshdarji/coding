@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+yt-dlp
+moviepy<2.0
+youtube-transcript-api
+imageio[ffmpeg]
+python-multipart
+opencv-python
+openai
+python-dotenv
