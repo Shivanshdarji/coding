@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D OS - Immersive Home Theater Experience</title>
+    <meta name="description"
+        content="Experience your operating system in a fully immersive 3D home theater environment with 5D screens">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="orbit-ring"></div>
+                <div class="orbit-ring"></div>
+                <div class="orbit-ring"></div>
+                <span class="logo-text">3D OS</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Initializing Virtual Environment...</p>
+        </div>
+    </div>
+
+    <!-- Main 3D Canvas -->
+    <canvas id="canvas3d"></canvas>
+
+    <!-- UI Overlay -->
+    <div id="ui-overlay">
+        <!-- Top Bar -->
+        <div class="top-bar glass-panel">
+            <div class="logo-section">
+                <span class="os-logo">⚡ 3D OS</span>
+            </div>
+            <div class="time-section">
+                <span id="current-time">00:00:00</span>
+            </div>
+            <div class="controls-section">
+                <button class="icon-btn" id="settings-btn" title="Settings">⚙️</button>
+                <button class="icon-btn" id="fullscreen-btn" title="Fullscreen">⛶</button>
+            </div>
+        </div>
+
+        <!-- Screen Labels -->
+        <div id="screen-labels">
+            <div class="screen-label" data-screen="front">Front Screen</div>
+            <div class="screen-label" data-screen="left">Left Screen</div>
+            <div class="screen-label" data-screen="right">Right Screen</div>
+            <div class="screen-label" data-screen="back">Back Screen</div>
+            <div class="screen-label" data-screen="top">Top Screen</div>
+            <div class="screen-label" data-screen="bottom">Bottom Screen</div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel glass-panel">
+            <h3>Screen Controls</h3>
+            <div class="screen-grid">
+                <button class="screen-btn" data-screen="front">
+                    <span class="screen-icon">🖥️</span>
+                    <span>Front</span>
+                </button>
+                <button class="screen-btn" data-screen="left">
+                    <span class="screen-icon">📊</span>
+                    <span>Left</span>
+                </button>
+                <button class="screen-btn" data-screen="right">
+                    <span class="screen-icon">🎮</span>
+                    <span>Right</span>
+                </button>
+                <button class="screen-btn" data-screen="back">
+                    <span class="screen-icon">🎵</span>
+                    <span>Back</span>
+                </button>
+                <button class="screen-btn" data-screen="top">
+                    <span class="screen-icon">☁️</span>
+                    <span>Top</span>
+                </button>
+                <button class="screen-btn" data-screen="bottom">
+                    <span class="screen-icon">💻</span>
+                    <span>Bottom</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Help Panel -->
+        <div class="help-panel glass-panel">
+            <h4>Controls</h4>
+            <ul>
+                <li><strong>Mouse Drag:</strong> Look around 360°</li>
+                <li><strong>Scroll:</strong> Zoom in/out</li>
+                <li><strong>Click Screen:</strong> Focus & interact</li>
+                <li><strong>ESC:</strong> Exit focus mode</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Screen Content Modal -->
+    <div id="screen-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h2 id="modal-title">Screen Content</h2>
+                <button class="close-btn" id="close-modal">✕</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- OS Engine Modules -->
+    <script src="process-manager.js"></script>
+    <script src="scheduler.js"></script>
+    <script src="memory-manager.js"></script>
+    <script src="file-system.js"></script>
+    <script src="os-engine.js"></script>
+    <script src="visualizer-3d.js"></script>
+
+    <!-- Main Application Script -->
+    <script src="app.js"></script>
+</body>
+
+</html>

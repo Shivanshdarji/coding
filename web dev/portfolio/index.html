@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivansh Darji | AI/ML Engineer & Data Scientist</title>
+    <meta name="description"
+        content="Portfolio of Shivansh Darji — AI/ML Enthusiast, Data Scientist, UI/UX Designer. Exploring the intersection of Artificial Intelligence, Machine Learning, and innovative software solutions.">
+    <meta name="keywords" content="Shivansh Darji, AI, ML, Data Science, Machine Learning, Portfolio, Python, UI/UX">
+    <meta name="author" content="Shivansh Darji">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="neural-loader">
+                <div class="node n1"></div>
+                <div class="node n2"></div>
+                <div class="node n3"></div>
+                <div class="node n4"></div>
+                <div class="node n5"></div>
+                <svg class="connections" viewBox="0 0 100 100">
+                    <line x1="50" y1="20" x2="20" y2="50" class="conn" />
+                    <line x1="50" y1="20" x2="80" y2="50" class="conn" />
+                    <line x1="20" y1="50" x2="50" y2="80" class="conn" />
+                    <line x1="80" y1="50" x2="50" y2="80" class="conn" />
+                    <line x1="20" y1="50" x2="80" y2="50" class="conn" />
+                </svg>
+            </div>
+            <p class="loader-text">Initializing Neural Network<span class="blink">_</span></p>
+        </div>
+    </div>
+
+    <!-- Neural Network Canvas Background -->
+    <canvas id="neural-bg"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>SD<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" data-text="About">About</a></li>
+                <li><a href="#skills" data-text="Skills">Skills</a></li>
+                <li><a href="#experience" data-text="Experience">Experience</a></li>
+                <li><a href="#projects" data-text="Projects">Projects</a></li>
+                <li><a href="#achievements" data-text="Achievements">Achievements</a></li>
+                <li><a href="#contact" data-text="Contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Available for Opportunities</span>
+            </div>
+            <p class="hero-greeting">Hey there, I'm</p>
+            <h1 class="hero-name">
+                <span class="line-reveal"><span>Shivansh Darji</span></span>
+            </h1>
+            <h2 class="hero-subtitle">
+                <span class="line-reveal"><span>I build <em class="gradient-text">intelligent systems</em> that turn data into impact.</span></span>
+            </h2>
+            <p class="hero-description">
+                AI/ML enthusiast & pre-final year Computer Engineering student at SVIT (CGPA 9.4). 
+                From winning hackathons to building AI chatbots at IBM — I love solving real-world 
+                problems with Machine Learning, Data Science, and thoughtful design.
+            </p>
+            <div class="hero-terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">shivansh@portfolio:~</span>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="terminal-prompt">$</span> <span id="typewriter" class="typewriter-text"></span><span
+                            class="cursor-blink">|</span></p>
+                </div>
+            </div>
+            <div class="hero-tags">
+                <span class="tag"><i class="fas fa-brain"></i> AI/ML Engineer</span>
+                <span class="tag"><i class="fas fa-chart-line"></i> Data Scientist</span>
+                <span class="tag"><i class="fas fa-palette"></i> UI/UX Designer</span>
+                <span class="tag"><i class="fas fa-code"></i> Python Developer</span>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/shivansh-darji/" target="_blank" class="hero-social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/shivanshdarji" target="_blank" class="hero-social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:shivanshdarji1@gmail.com" class="hero-social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="6">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Hackathon Wins</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="150">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">LeetCode Solved</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title reveal-text">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal-up">
+                    <div class="about-terminal">
+                        <div class="terminal-header mini">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                        </div>
+                        <div class="about-code">
+                            <pre><code><span class="code-keyword">class</span> <span class="code-class">ShivanshDarji</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(<span class="code-param">self</span>):
+        <span class="code-param">self</span>.name = <span class="code-string">"Shivansh Darji"</span>
+        <span class="code-param">self</span>.role = <span class="code-string">"AI/ML Enthusiast"</span>
+        <span class="code-param">self</span>.education = <span class="code-string">"B.E. Computer Engineering"</span>
+        <span class="code-param">self</span>.university = <span class="code-string">"SVIT, Vasad (GTU)"</span>
+        <span class="code-param">self</span>.cgpa = <span class="code-number">9.4</span>
+        <span class="code-param">self</span>.languages = [<span class="code-string">"English"</span>, <span class="code-string">"Hindi"</span>, <span class="code-string">"Gujarati"</span>]
+
+    <span class="code-keyword">def</span> <span class="code-func">get_passion</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">return</span> <span class="code-string">"Building intelligent systems that solve real-world problems"</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-description reveal-up">
+                    <p class="about-para">
+                        I'm a <span class="highlight">results-driven AI/ML enthusiast</span> and pre-final year Computer
+                        Engineering student at SVIT, Vasad with a CGPA of <span class="highlight">9.4</span>. I blend my
+                        expertise in <span class="highlight">Artificial Intelligence</span>, <span
+                            class="highlight">Machine Learning</span>, and <span class="highlight">UI/UX Design</span>
+                        to craft intelligent, user-centric software solutions.
+                    </p>
+                    <p class="about-para">
+                        From founding <span class="highlight">AppDice</span> (a B2B SaaS automation platform) to hosting
+                        the <span class="highlight">No Doubt! Podcast</span>, I'm passionate about leveraging technology
+                        to drive innovation. As the <span class="highlight">Data Science Lead</span> at Google
+                        Developers Club (SVIT), I lead seminars and workshops, sharing knowledge with the community.
+                    </p>
+                    <p class="about-para">
+                        My journey spans winning multiple hackathons, building AI chatbots at <span
+                            class="highlight">IBM</span>, and solving 150+ problems on <span
+                            class="highlight">LeetCode</span>. I thrive at the intersection of data, design, and
+                        development.
+                    </p>
+                    <div class="about-links">
+                        <a href="https://www.linkedin.com/in/shivansh-darji/" target="_blank" class="social-link"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:shivanshdarji1@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/shivanshdarji" target="_blank" class="social-link"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag closing">&lt;/about&gt;</span>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title reveal-text">Tech Stack</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- AI / ML -->
+                <div class="skill-category reveal-up" data-delay="0">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI / Machine Learning</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Scikit-Learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">NumPy & Pandas</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Matplotlib</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">IBM Watson</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">LangFlow / n8n</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">ML Algorithms</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Programming -->
+                <div class="skill-category reveal-up" data-delay="100">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C / C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">DSA (C++)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Data Visualization</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Web & Design -->
+                <div class="skill-category reveal-up" data-delay="200">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Web & Design</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML / CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React (Basics)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Figma Pro</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="72"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Canva</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill-category reveal-up" data-delay="300">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Git & GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">VS Code / Cursor</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Jupyter Notebook</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">IBM Cloud</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag closing">&lt;/skills&gt;</span>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title reveal-text">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal-up" data-delay="0">
+                    <div class="timeline-dot">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Founder</h3>
+                            <span class="timeline-company">AppDice & No Doubt! Podcast</span>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar"></i> April 2025 – Present</span>
+                        <p>Building <strong>AppDice</strong> — a B2B SaaS automation platform with co-founder Naiteek
+                            Choksi. Also hosting <strong>No Doubt!</strong> podcast, exploring technology and
+                            entrepreneurship.</p>
+                        <div class="timeline-tags">
+                            <span>SaaS</span>
+                            <span>Automation</span>
+                            <span>Entrepreneurship</span>
+                            <span>Podcast</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-up" data-delay="100">
+                    <div class="timeline-dot">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Data Science Lead</h3>
+                            <span class="timeline-company">Google Developers Club, SVIT</span>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar"></i> 2024 – 2025</span>
+                        <p>Leading the Data Science vertical at Google Developers Club on Campus. Conducting seminars,
+                            workshops, and mentoring students on Data Science, Machine Learning, and AI concepts.</p>
+                        <div class="timeline-tags">
+                            <span>Data Science</span>
+                            <span>Leadership</span>
+                            <span>Mentoring</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-up" data-delay="200">
+                    <div class="timeline-dot">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>UI/UX Co-ordinator</h3>
+                            <span class="timeline-company">Google Developers Club, SVIT</span>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar"></i> June 2024 – June 2025</span>
+                        <p>Designed intuitive interfaces and user experiences for club projects. Bridging the gap
+                            between design thinking and technical implementation.</p>
+                        <div class="timeline-tags">
+                            <span>UI/UX</span>
+                            <span>Figma</span>
+                            <span>Design Systems</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-up" data-delay="300">
+                    <div class="timeline-dot">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>AI Intern</h3>
+                            <span class="timeline-company">IBM</span>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar"></i> July 2024 – August 2024</span>
+                        <p>Designed and developed AI-powered chatbots using IBM Cloud, Watson-X, and TensorFlow. Gained
+                            hands-on experience in supervised, unsupervised, and reinforcement learning. Integrated
+                            chatbots with business applications for real-world deployment.</p>
+                        <div class="timeline-tags">
+                            <span>IBM Watson</span>
+                            <span>TensorFlow</span>
+                            <span>NLP</span>
+                            <span>Chatbots</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-up" data-delay="400">
+                    <div class="timeline-dot">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Social Media Manager & Graphic Designer</h3>
+                            <span class="timeline-company">AWS User Group Vadodara</span>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar"></i> April 2024 – Present</span>
+                        <p>Managing social media presence and creating visually stunning graphics for community events.
+                            Contributing to knowledge sharing and growing the cloud computing ecosystem in Vadodara.</p>
+                        <div class="timeline-tags">
+                            <span>AWS</span>
+                            <span>Design</span>
+                            <span>Community</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-up" data-delay="500">
+                    <div class="timeline-dot">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Graphic Design Intern</h3>
+                            <span class="timeline-company">Mazinda Pvt Ltd</span>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar"></i> April 2024 – July 2024 (4
+                            months)</span>
+                        <p>Created visually appealing designs for marketing materials and websites. Refined skills in
+                            Figma Pro and developed a strong creative portfolio for brand identity projects.</p>
+                        <div class="timeline-tags">
+                            <span>Figma</span>
+                            <span>Branding</span>
+                            <span>Marketing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag closing">&lt;/experience&gt;</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title reveal-text">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 2: AI Movie Recommendation Bot -->
+                <div class="project-card reveal-up" data-delay="100">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="badge ibm"><i class="fas fa-building"></i> IBM Internship</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">AI Movie Recommendation Bot</h3>
+                    <p class="project-desc">Designed a Movie Recommendation Bot using IBM Cloud (Watson-X) as an
+                        internship project at IBM. Uses ML algorithms to suggest personalized movie recommendations.</p>
+                    <div class="project-tech">
+                        <span>IBM Watson-X</span>
+                        <span>Python</span>
+                        <span>NLP</span>
+                        <span>ML</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: ROOMii -->
+                <div class="project-card reveal-up" data-delay="200">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <h3 class="project-title">ROOMii</h3>
+                    <p class="project-desc">An emotional AI companion bot that analyzes your emotions and tone, then
+                        talks to you like your best friend. Built with sentiment analysis and natural language
+                        understanding.</p>
+                    <div class="project-tech">
+                        <span>Sentiment Analysis</span>
+                        <span>NLP</span>
+                        <span>Python</span>
+                        <span>AI</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Carbon Emission Checker -->
+                <div class="project-card reveal-up" data-delay="0">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Carbon Emission & Sustainability Checker</h3>
+                    <p class="project-desc">A sustainability tool that tracks and analyzes carbon emissions, providing
+                        actionable insights for environmental impact reduction.</p>
+                    <div class="project-tech">
+                        <span>Data Science</span>
+                        <span>Python</span>
+                        <span>Analytics</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: Energy Consumption -->
+                <div class="project-card reveal-up" data-delay="100">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Energy Consumption Prediction System</h3>
+                    <p class="project-desc">A predictive ML system that forecasts energy consumption patterns using
+                        historical data, helping optimize energy usage and reduce costs.</p>
+                    <div class="project-tech">
+                        <span>ML</span>
+                        <span>Prediction</span>
+                        <span>Data Analysis</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+
+                <!-- Project 6: Automated Resume Generator -->
+                <div class="project-card reveal-up" data-delay="200">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Automated Resume Generator</h3>
+                    <p class="project-desc">An intelligent tool that automatically generates professional resumes based
+                        on user input, using template engines and smart formatting algorithms.</p>
+                    <div class="project-tech">
+                        <span>Automation</span>
+                        <span>Python</span>
+                        <span>Template Engine</span>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag closing">&lt;/projects&gt;</span>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;achievements&gt;</span>
+                <h2 class="section-title reveal-text">Achievements</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="achievements-grid">
+
+                <div class="achievement-card reveal-up" data-delay="100">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>OpenR Ideathon Winner</h3>
+                    <p>Won OpenR Ideathon with innovative project presentation and execution</p>
+                </div>
+                <div class="achievement-card reveal-up" data-delay="200">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>ITM Hackathon — Top 5</h3>
+                    <p>Secured Top 5 position among hundreds of competing teams</p>
+                </div>
+                <div class="achievement-card reveal-up" data-delay="300">
+                    <div class="achievement-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>ParulHacks — Top 10</h3>
+                    <p>Placed in the Top 10 at ParulHacks Hackathon</p>
+                </div>
+                <div class="achievement-card reveal-up" data-delay="400">
+                    <div class="achievement-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>NIT Hamirpur — Finalist</h3>
+                    <p>Reached Top 50 teams at NIT Hamirpur National Hackathon</p>
+                </div>
+                <div class="achievement-card reveal-up" data-delay="500">
+                    <div class="achievement-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>SSIP Funding Secured</h3>
+                    <p>Secured Student Startup and Innovation Policy (SSIP) funding from Gujarat Government</p>
+                </div>
+                <div class="achievement-card reveal-up" data-delay="600">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>LeetCode — 150+ Solved</h3>
+                    <p>Solved 150+ problems on LeetCode, strengthening DSA and problem-solving skills</p>
+                </div>
+                <div class="achievement-card reveal-up" data-delay="700">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>CGPA 9.4 at GTU</h3>
+                    <p>Maintaining a stellar 9.4 CGPA in B.E. Computer Engineering at GTU</p>
+                </div>
+            </div>
+            <span class="section-tag closing">&lt;/achievements&gt;</span>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;education&gt;</span>
+                <h2 class="section-title reveal-text">Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-grid">
+                <div class="education-card reveal-up" data-delay="0">
+                    <div class="education-year">2023 – 2027</div>
+                    <div class="education-info">
+                        <h3>B.E. in Computer Engineering</h3>
+                        <p class="education-school">SVIT, Vasad — Gujarat Technological University</p>
+                        <div class="education-badge">
+                            <i class="fas fa-star"></i>
+                            <span>CGPA: 9.4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-card reveal-up" data-delay="100">
+                    <div class="education-year">2021 – 2023</div>
+                    <div class="education-info">
+                        <h3>Higher Secondary Education (HSC)</h3>
+                        <p class="education-school">Science Stream</p>
+                    </div>
+                </div>
+                <div class="education-card reveal-up" data-delay="200">
+                    <div class="education-year">– 2021</div>
+                    <div class="education-info">
+                        <h3>Secondary Education</h3>
+                        <p class="education-school">Don Bosco High School</p>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag closing">&lt;/education&gt;</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title reveal-text">Let's Connect</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-up">
+                    <h3>Ready to collaborate?</h3>
+                    <p>Whether you have a project in mind, want to discuss AI/ML ideas, or just want to say hello — I'd
+                        love to hear from you!</p>
+                    <div class="contact-methods">
+                        <a href="mailto:shivanshdarji1@gmail.com" class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="contact-method-label">Email</span>
+                                <span class="contact-method-value">shivanshdarji1@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+917984207959" class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="contact-method-label">Phone</span>
+                                <span class="contact-method-value">+91 7984207959</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shivansh-darji/" target="_blank" class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <span class="contact-method-label">LinkedIn</span>
+                                <span class="contact-method-value">Shivansh Darji</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal-up">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..."
+                                required></textarea>
+                            <div class="input-line"></div>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <span class="section-tag closing">&lt;/contact&gt;</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>SD<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">Designed & Built by <span class="highlight">Shivansh Darji</span></p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/shivansh-darji/" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:shivanshdarji1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/shivanshdarji" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                </div>
+                <p class="footer-copy">&copy; 2025 Shivansh Darji. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

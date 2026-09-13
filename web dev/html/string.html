@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Progress Dashboard</title>
+    <style>
+        .progress-container {
+            width: 80%;
+            background-color: #f3f3f3;
+            border-radius: 25px;
+            margin: 20px auto;
+            padding: 5px;
+        }
+
+        .progress-bar {
+            height: 30px;
+            background-color: #4caf50;
+            border-radius: 20px;
+            transition: width 0.5s;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>User Progress Dashboard</h1>
+
+{% for activity in activities %}
+    <h3>{{ activity.name }}</h3>
+    <p>{{ activity.description }}</p>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar-{{ activity.id }}" style="width: {{ progress_data|get_item:activity.id }}%"></div>
+    </div>
+
+    <button onclick="updateProgress({{ activity.id }})">Update Progress</button>
+    <hr>
+{% endfor %}
+
+<script>
+    function updateProgress(activityId) {
+        const progress = prompt('Enter your progress (0 to 100):', '0');
+        if (progress === null || isNaN(progress) || progress < 0 || progress > 100) {
+            alert('Please enter a valid progress value (0-100).');
+            return;
+        }
+
+        // Update the progress in the database using AJAX
+        fetch('/progress/update-progress/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: JSON.stringify({
+                activity_id: activityId,
+                progress: progress
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('progress-bar-' + activityId).style.width = data.progress + '%';
+            alert(data.message);
+        })
+        .catch(error => {
+            alert('Error updating progress');
+            console.error(error);
+        });
+    }
+</script>
+
+</body>
+</html>

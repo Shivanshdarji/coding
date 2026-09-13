@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    @apply bg-gray-950 text-white overflow-hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+@layer utilities {
+    .glass-panel {
+        @apply bg-gray-900/60 backdrop-blur-md border border-gray-700/50 shadow-xl;
+    }
+
+    .glass-button {
+        @apply bg-cyan-600/80 hover:bg-cyan-500/90 backdrop-blur-sm text-white transition-all duration-200;
+    }
+}
