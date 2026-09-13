@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome, {{ user.name }}!</h2>
+<div class="row mt-4">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5>Your Investments</h5>
+            </div>
+            <div class="card-body">
+                {% if investments %}
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Stock</th>
+                                    <th>Amount</th>
+                                    <th>Shares</th>
+                                    <th>Buy Price</th>
+                                    <th>Current Value</th>
+                                    <th>Predicted Growth</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for inv in investments %}
+                                <tr>
+                                    <td>{{ inv.stock_symbol }}</td>
+                                    <td>₹{{ "%.2f"|format(inv.amount_invested) }}</td>
+                                    <td>{{ "%.4f"|format(inv.shares) }}</td>
+                                    <td>₹{{ "%.2f"|format(inv.buy_price) }}</td>
+                                    <td>₹{{ "%.2f"|format(inv.current_value) if inv.current_value else 'N/A' }}</td>
+                                    <td class="{{ 'text-success' if inv.predicted_growth > 0 else 'text-danger' }}">
+                                        {{ "%.2f"|format(inv.predicted_growth) }}%
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <p>You haven't made any investments yet.</p>
+                    <a href="{{ url_for('invest') }}" class="btn btn-primary">Make Your First Investment</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5>Quick Stats</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <h6>Total Invested</h6>
+                    <h4>₹{{ "%.2f"|format(investments|sum(attribute='amount_invested')) }}</h4>
+                </div>
+                <div class="mb-3">
+                    <h6>Current Value</h6>
+                    <h4>₹{{ "%.2f"|format(investments|sum(attribute='current_value')) if investments[0].current_value else 'N/A' }}</h4>
+                </div>
+                <div>
+                    <h6>Predicted Growth</h6>
+                    <h4 class="{{ 'text-success' if (investments|sum(attribute='predicted_growth')/investments|length) > 0 else 'text-danger' }}">
+                        {{ "%.2f"|format(investments|sum(attribute='predicted_growth')/investments|length if investments else 0) }}%
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

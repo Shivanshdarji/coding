@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Invest{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4>Make an Investment</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('invest') }}">
+                    <div class="mb-3">
+                        <label for="symbol" class="form-label">Stock Symbol (e.g., AAPL, MSFT)</label>
+                        <input type="text" class="form-control" id="symbol" name="symbol" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount to Invest (₹)</label>
+                        <input type="number" class="form-control" id="amount" name="amount" min="100" step="50" required>
+                        <div class="form-text">Minimum investment: ₹100</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Invest Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
