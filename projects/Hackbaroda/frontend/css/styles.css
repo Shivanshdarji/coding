@@ -1,0 +1,718 @@
+/* ==========================================================================
+   Aetheris Brand Strategist — Unified Stylesheet
+   ==========================================================================
+   Design System Tokens:
+     --primary:                #18241b  (Deep Forest Green)
+     --surface:                #fbf9f7  (Warm Champagne)
+     --on-surface:             #1b1c1b
+     --outline-variant:        #c3c8c2
+     --surface-variant:        #e4e2e0
+     --surface-container-low:  #f6f3f1
+     --surface-container:      #f0edeb
+     --inverse-surface:        #30302f
+   ========================================================================== */
+
+:root {
+  --primary: #18241b;
+  --surface: #fbf9f7;
+  --on-surface: #1b1c1b;
+  --outline-variant: #c3c8c2;
+  --surface-variant: #e4e2e0;
+  --surface-container-low: #f6f3f1;
+  --surface-container: #f0edeb;
+  --inverse-surface: #30302f;
+  --surface-bright: #fbf9f7;
+  --primary-container: #2d3930;
+  --on-primary-container: #95a397;
+  --surface-container-lowest: #ffffff;
+}
+
+
+/* ==========================================================================
+   1. Page Router
+   Controls SPA page visibility with a subtle fade-in when activated.
+   ========================================================================== */
+
+.page-section {
+  display: none;
+}
+
+.page-section.active {
+  display: block;
+  animation: pageFadeIn 0.35s ease-out;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* ==========================================================================
+   2. Premium Input Styles
+   Minimal, bottom-border-only inputs that highlight on focus.
+   ========================================================================== */
+
+.premium-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--outline-variant);
+  border-radius: 0;
+  padding: 12px 0;
+  width: 100%;
+  font-size: 16px;
+  color: var(--on-surface);
+  transition: border-color 0.3s ease;
+}
+
+.premium-input:focus {
+  outline: none;
+  box-shadow: none;
+  border-bottom-color: var(--primary);
+}
+
+.premium-input::placeholder {
+  color: var(--outline-variant);
+}
+
+
+/* ==========================================================================
+   3. Range Slider Overrides
+   Custom thumb and track for WebKit-based browsers.
+   ========================================================================== */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Track */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 2px;
+  background: var(--outline-variant);
+  border-radius: 1px;
+}
+
+/* Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-top: -7px; /* vertically center on the 2px track */
+  box-shadow: 0 0 0 4px #ffffff;
+  border: none;
+}
+
+/* Firefox track */
+input[type="range"]::-moz-range-track {
+  height: 2px;
+  background: var(--outline-variant);
+  border-radius: 1px;
+  border: none;
+}
+
+/* Firefox thumb */
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 4px #ffffff;
+  border: none;
+}
+
+
+/* ==========================================================================
+   4. Scrollbar Hiding
+   Removes WebKit scrollbars globally for a cleaner interface.
+   ========================================================================== */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+
+/* ==========================================================================
+   5. Reveal Animations
+   Scroll-triggered entrance animation for content sections.
+   ========================================================================== */
+
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==========================================================================
+   6. Material Symbols Override
+   Default weight/fill settings for Google Material Symbols.
+   ========================================================================== */
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+
+/* ==========================================================================
+   7. Chip Components
+   Selectable tag-like elements used across onboarding and dashboard.
+   ========================================================================== */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-bright);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--on-surface);
+  cursor: pointer;
+  transition: background 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.chip:hover {
+  border-color: var(--primary);
+}
+
+.chip.selected {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.chip .chip-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  line-height: 1;
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+}
+
+.chip .chip-remove:hover {
+  opacity: 1;
+}
+
+
+/* ==========================================================================
+   8. Card Selection
+   Maturity-level cards with a selected highlight state.
+   ========================================================================== */
+
+.maturity-card {
+  border: 1px solid var(--outline-variant);
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: border-color 0.25s ease,
+              background-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.maturity-card:hover {
+  border-color: var(--primary);
+}
+
+.maturity-card.selected {
+  border-color: var(--primary);
+  background-color: var(--surface-container-low);
+  box-shadow: 0 1px 4px rgba(24, 36, 27, 0.08);
+}
+
+
+/* ==========================================================================
+   9. Page Transitions
+   Keyframe animation applied when navigating between pages.
+   ========================================================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fadeIn 0.4s ease-out both;
+}
+
+
+/* ==========================================================================
+   10. Dashboard Layout
+   Three-column CSS Grid: sidebar | main | artifacts panel.
+   Collapses to single-column on mobile with an overlay sidebar.
+   ========================================================================== */
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr 320px;
+  min-height: 100vh;
+}
+
+/* Sidebar — fixed left column */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 50;
+  background: var(--surface);
+  border-right: 1px solid var(--outline-variant);
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+/* Mobile: sidebar hidden by default, revealed with .open */
+@media (max-width: 767px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* Backdrop overlay when sidebar is open on mobile */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 40;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+
+/* ==========================================================================
+   11. Chat Styles
+   User and AI message bubbles with distinct alignment and colors.
+   ========================================================================== */
+
+.chat-message {
+  font-size: 15px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  transition: background-color 0.2s ease;
+}
+
+.chat-message:hover {
+  background-color: var(--surface-container-lowest);
+}
+
+
+/* ==========================================================================
+   12. Chat Input Bar
+   Sticky bar at the bottom of the main chat area.
+   ========================================================================== */
+
+.chat-input-bar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: var(--surface);
+  border-top: 1px solid var(--outline-variant);
+  z-index: 10;
+}
+
+.chat-input-bar input,
+.chat-input-bar textarea {
+  flex: 1;
+  min-height: 40px;
+  resize: none;
+}
+
+
+/* ==========================================================================
+   13. Responsive — Mobile Adjustments (max-width: 767px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+  /* Collapse grid to single column */
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Artifacts panel becomes full-width at the bottom */
+  .artifacts-panel {
+    width: 100%;
+    position: relative;
+    border-left: none;
+    border-top: 1px solid var(--outline-variant);
+  }
+
+  /* Slightly reduce heading sizes */
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.35rem; }
+  h3 { font-size: 1.1rem; }
+
+  /* Chat messages take more width on small screens */
+  .chat-message {
+    max-width: 90%;
+  }
+}
+
+
+/* ==========================================================================
+   14. Custom Radio Indicator
+   A simple circle with an inner dot when checked.
+   ========================================================================== */
+
+.radio-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--outline-variant);
+  flex-shrink: 0;
+  transition: border-color 0.2s ease;
+}
+
+.radio-indicator.checked {
+  border-color: var(--primary);
+}
+
+.radio-indicator.checked::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+
+/* ==========================================================================
+   15. Gentle Pulse Animation
+   Subtle scale pulse for checkmark icons on selected cards.
+   ========================================================================== */
+
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
+}
+
+.gentle-pulse {
+  animation: gentlePulse 2s ease-in-out infinite;
+}
+
+
+/* ==========================================================================
+   16. Progress Bar
+   Horizontal step indicator with completed / upcoming states.
+   ========================================================================== */
+
+.progress-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  width: 100%;
+}
+
+.progress-step {
+  flex: 1;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--surface-variant);
+  transition: background-color 0.3s ease;
+}
+
+.progress-step.completed {
+  background: var(--primary);
+}
+
+.progress-step.upcoming {
+  background: var(--surface-variant);
+}
+
+
+/* ==========================================================================
+   17. Shake Animation (Aesthetic Chips Max-3 Feedback)
+   ========================================================================== */
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+
+/* ==========================================================================
+   18. Sidebar Nav Active State
+   ========================================================================== */
+
+.sidebar-nav-item.active {
+  background-color: var(--surface-container-low);
+  color: var(--primary);
+  font-weight: 500;
+  border-left: 3px solid var(--primary);
+}
+
+
+/* ==========================================================================
+   19. Aesthetic Chip Selected State (via Tailwind override)
+   ========================================================================== */
+
+.aesthetic-chip.selected {
+  background-color: var(--primary) !important;
+  color: #ffffff !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 2px 8px rgba(24, 36, 27, 0.15);
+}
+
+
+/* ==========================================================================
+   20. Chat main area grid placement
+   ========================================================================== */
+
+.chat-main {
+  grid-column: 2;
+}
+
+.artifacts-panel {
+  grid-column: 3;
+}
+
+@media (max-width: 767px) {
+  .chat-main,
+  .artifacts-panel {
+    grid-column: 1;
+  }
+}
+
+
+/* ==========================================================================
+   21. Pipeline Loading Overlay
+   ========================================================================== */
+
+.pipeline-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(27, 28, 27, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.pipeline-overlay.hidden {
+  display: none;
+}
+
+.pipeline-modal {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 24px 48px rgba(24, 36, 27, 0.15);
+}
+
+.pipeline-modal-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.pipeline-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pipeline-stage {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--surface-container-low);
+  opacity: 0.5;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.pipeline-stage.active {
+  opacity: 1;
+  background: var(--primary-fixed);
+}
+
+.pipeline-stage.completed {
+  opacity: 0.85;
+}
+
+.pipeline-stage.completed .pipeline-stage-icon {
+  color: var(--primary);
+}
+
+.pipeline-stage.active .pipeline-stage-icon {
+  animation: gentlePulse 1.5s ease-in-out infinite;
+}
+
+.pipeline-stage-icon {
+  font-size: 20px;
+  color: var(--outline);
+}
+
+.pipeline-stage-label {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--on-surface);
+}
+
+.pipeline-stage.completed .pipeline-stage-label::after {
+  content: ' ✓';
+  color: var(--primary);
+}
+
+
+/* ==========================================================================
+   22. Strategy Board
+   ========================================================================== */
+
+.dashboard-view.hidden {
+  display: none !important;
+}
+
+.strategy-board-header {
+  border-bottom: 1px solid var(--outline-variant);
+  padding-bottom: 24px;
+}
+
+.strategy-section {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.strategy-section:last-child {
+  border-bottom: none;
+}
+
+.strategy-day-card {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.strategy-day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.strategy-badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: var(--primary-fixed);
+  color: var(--on-primary-fixed);
+}
+
+.strategy-tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: var(--surface-container);
+  color: var(--on-surface-variant);
+}
+
+.strategy-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.strategy-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--on-surface);
+  padding-left: 20px;
+  position: relative;
+}
+
+.strategy-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}

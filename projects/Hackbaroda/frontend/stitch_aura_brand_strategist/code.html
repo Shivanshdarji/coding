@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Defining the Brand Soul - Quiet Luxury AI</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Design System Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#39362d",
+                    "on-surface-variant": "#434843",
+                    "surface-variant": "#e4e2e0",
+                    "on-secondary-fixed-variant": "#474743",
+                    "on-secondary-container": "#656461",
+                    "secondary-container": "#e5e2dd",
+                    "tertiary-fixed": "#e9e2d4",
+                    "primary": "#18241b",
+                    "on-surface": "#1b1c1b",
+                    "surface-dim": "#dcdad8",
+                    "on-primary-container": "#95a397",
+                    "tertiary-fixed-dim": "#ccc6b9",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fbf9f7",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#4a463d",
+                    "surface-container-low": "#f6f3f1",
+                    "secondary-fixed": "#e5e2dd",
+                    "inverse-surface": "#30302f",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#a49e93",
+                    "on-background": "#1b1c1b",
+                    "primary-fixed-dim": "#bccabd",
+                    "primary-container": "#2d3930",
+                    "outline": "#747873",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e4e2e0",
+                    "surface-container": "#f0edeb",
+                    "on-primary-fixed": "#131e16",
+                    "inverse-on-surface": "#f3f0ee",
+                    "surface-tint": "#556157",
+                    "surface": "#fbf9f7",
+                    "surface-bright": "#fbf9f7",
+                    "on-tertiary-fixed": "#1e1b13",
+                    "secondary": "#5f5e5b",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#3d4a40",
+                    "tertiary": "#242118",
+                    "secondary-fixed-dim": "#c9c6c2",
+                    "inverse-primary": "#bccabd",
+                    "primary-fixed": "#d8e6d9",
+                    "outline-variant": "#c3c8c2",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#eae8e6",
+                    "on-secondary-fixed": "#1c1c19",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "container-max-width": "1200px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter", "sans-serif"],
+                    "body-md": ["Inter", "sans-serif"],
+                    "body-sm": ["Inter", "sans-serif"],
+                    "label-caps": ["Inter", "sans-serif"],
+                    "headline-lg": ["EB Garamond", "serif"],
+                    "display-lg": ["EB Garamond", "serif"],
+                    "headline-md": ["EB Garamond", "serif"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Quiet Luxury Form Styles */
+        .premium-input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid theme('colors.outline-variant');
+            transition: border-color 0.3s ease;
+        }
+        .premium-input:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: theme('colors.primary');
+        }
+        
+        /* Custom Range Slider */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: theme('colors.primary');
+            cursor: pointer;
+            margin-top: -7px;
+            box-shadow: 0 0 0 4px theme('colors.surface');
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            background: theme('colors.outline-variant');
+            border-radius: 1px;
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+
+        /* Hide Scrollbar for clean UI */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        /* Sequential Reveal Animation Classes */
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-item.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md antialiased overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Main Canvas Content Area (Navigation Suppressed for Onboarding Intent) -->
+<main class="w-full max-w-[800px] mx-auto px-6 md:px-margin-desktop py-24 md:py-32 flex flex-col gap-24">
+<!-- Header -->
+<header class="flex flex-col gap-6 text-center items-center reveal-item">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Phase I</span>
+<h1 class="font-display-lg text-display-lg text-primary">Defining the Brand Soul</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                Before we can strategize, we must establish boundaries. Tell us who you are, and more importantly, <span class="font-headline-md text-headline-md italic text-on-surface">who you refuse to be.</span>
+</p>
+<div class="h-px w-24 bg-outline-variant mt-4"></div>
+</header>
+<!-- Form Container -->
+<form class="flex flex-col gap-20">
+<!-- 1. Brand Philosophy Sliders -->
+<section class="flex flex-col gap-8 reveal-item">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-primary">Brand Philosophy</h2>
+<p class="font-body-sm text-body-sm text-secondary">Position your brand's underlying tension.</p>
+</div>
+<div class="flex flex-col gap-12 bg-surface-container-lowest p-8 rounded-lg shadow-sm border border-surface-variant">
+<!-- Slider 1 -->
+<div class="flex flex-col gap-6">
+<div class="flex justify-between items-center px-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Heritage</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Futurism</span>
+</div>
+<div class="relative w-full">
+<input class="w-full" max="100" min="1" type="range" value="30"/>
+</div>
+</div>
+<!-- Slider 2 -->
+<div class="flex flex-col gap-6">
+<div class="flex justify-between items-center px-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Restraint</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Boldness</span>
+</div>
+<div class="relative w-full">
+<input class="w-full" max="100" min="1" type="range" value="75"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. The Anti-Persona -->
+<section class="flex flex-col gap-6 reveal-item">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-primary">The Anti-Persona</h2>
+<p class="font-body-sm text-body-sm text-secondary">Exclusivity is defined by who you exclude. Describe the audience this brand is explicitly <span class="font-headline-md text-body-md italic text-on-surface">not</span> built for.</p>
+</div>
+<textarea class="premium-input font-body-md text-body-md text-on-surface w-full resize-none p-4 bg-surface-container-lowest rounded-t-DEFAULT" placeholder="e.g., We are not for the trend-chasers seeking immediate gratification..." rows="4"></textarea>
+</section>
+<!-- 3. Voice Taboos -->
+<section class="flex flex-col gap-6 reveal-item">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-primary">Voice Taboos</h2>
+<p class="font-body-sm text-body-sm text-secondary">Specify forbidden language. Words that instantly compromise your brand's integrity.</p>
+</div>
+<div class="flex flex-col gap-4 p-6 bg-surface-container-lowest rounded-lg border border-surface-variant">
+<div class="flex items-center gap-2 border-b border-outline-variant pb-2 focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined text-outline">block</span>
+<input class="bg-transparent border-none focus:ring-0 w-full font-body-md text-body-md text-on-surface p-0 placeholder:text-outline-variant" placeholder="Add a forbidden word and press Enter..." type="text"/>
+</div>
+<!-- Chips Container -->
+<div class="flex flex-wrap gap-3 mt-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors hover:bg-surface-variant cursor-pointer group">
+                            affordable
+                            <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">close</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors hover:bg-surface-variant cursor-pointer group">
+                            cheap
+                            <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">close</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors hover:bg-surface-variant cursor-pointer group">
+                            fast
+                            <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">close</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors hover:bg-surface-variant cursor-pointer group">
+                            hack
+                            <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">close</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Visual Vernacular -->
+<section class="flex flex-col gap-8 reveal-item">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-primary">Visual Vernacular</h2>
+<p class="font-body-sm text-body-sm text-secondary">Select the primary material texture that grounds your brand's sensory experience.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<label class="group cursor-pointer relative flex flex-col gap-3">
+<input checked="" class="peer sr-only" name="texture" type="radio" value="linen"/>
+<div class="aspect-square w-full rounded-DEFAULT overflow-hidden border border-transparent peer-checked:border-primary peer-checked:ring-1 peer-checked:ring-primary transition-all duration-300">
+<img alt="Raw Linen Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A close-up, high-resolution macro shot of natural raw linen fabric. The texture is prominent, showing the weave and slight imperfections of the organic material. The lighting is soft, diffused, and bright, creating a serene, high-key light mode aesthetic. Colors are subtle off-whites and pale beiges. The mood is tactile, understated, and grounded in nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnDwKiOJw6IbX59tjMCeQu0nEjQF0YZTTJnjUhna3Te3NNEibSm9oJSmUd9lB_e3kMd5k4RSRB1N-dH4qxKg3oewOjnWXeiNJOPgZHfp1cxIBg30EcQAPtTXK9t7ZE4-j0GzA1gikmzM_VmtHK8WDkAuyqROP5yukbeNr4PyoJD20uypku0iSuYoQ8jOhFt7XW_QOTt5zQ_0RD7ulvMXngxDu9RqRwwlodNm5dk2xTtpFfYVvQcMvTWfUR7pWFylRliyzHow72gXBg"/>
+</div>
+<div class="flex items-center justify-between px-1">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest">Raw Linen</span>
+<div class="w-4 h-4 rounded-full border border-outline-variant flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary transition-colors">
+<div class="w-1.5 h-1.5 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</label>
+<!-- Card 2 -->
+<label class="group cursor-pointer relative flex flex-col gap-3">
+<input class="peer sr-only" name="texture" type="radio" value="marble"/>
+<div class="aspect-square w-full rounded-DEFAULT overflow-hidden border border-transparent peer-checked:border-primary peer-checked:ring-1 peer-checked:ring-primary transition-all duration-300">
+<img alt="Polished Marble Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, elegant shot of a pristine slab of polished white Carrara marble with subtle, organic grey veining. The surface is subtly reflective, catching soft, natural light from a window out of frame. The overall aesthetic is bright, minimalist, and luxurious, fitting a premium light mode UI. The mood is cold, solid, and timelessly sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCydNwI1pDzLr4JMZ1Vt52bdgDoSFHW-5UU6WAiSn97r3ywhB54N9UK1YDrw-o97RD8eG7bv-MUjBkPp9QZiD0btI63cJJZW2VpbYFSM05sTWby76wGO2hYURTARa6h-i5G_31NauFEnDq0nuFWslhcc9tQbWTWHYBqsq_Ool8oYFig4QOJRym7rrzx0ejlQfUGHIyL2203sz1bjRzEComyDgt1Ht5tySVK2bMNH4eJ-pU-U0_TlepcpeEwTWMt9Ngah9O4j3Tu41Vt"/>
+</div>
+<div class="flex items-center justify-between px-1">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest">Polished Marble</span>
+<div class="w-4 h-4 rounded-full border border-outline-variant flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary transition-colors">
+<div class="w-1.5 h-1.5 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</label>
+<!-- Card 3 -->
+<label class="group cursor-pointer relative flex flex-col gap-3">
+<input class="peer sr-only" name="texture" type="radio" value="paper"/>
+<div class="aspect-square w-full rounded-DEFAULT overflow-hidden border border-transparent peer-checked:border-primary peer-checked:ring-1 peer-checked:ring-primary transition-all duration-300">
+<img alt="Recycled Paper Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A close-up photograph of thick, high-quality handmade recycled paper with deckled edges. The texture is rich with small fibrous inclusions and a matte finish. Illuminated by gentle, warm, angled sunlight that highlights the microscopic surface variations. The color palette consists of warm, creamy off-whites and subtle champagne tones. The atmosphere is artisanal, sustainable, and refined." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQGOq43XQUX3ZOs9UaE6vJ2FuGnXmL_hcZ1m_oKJC-xJzeduwyg6YrB8v7cYnSIXKsPdw44n6Xwt1BopiqjUWOIEhLHNLuR_JP9gwKpPdvwBZzXGb7aLRt42NJ5brykA_XVS9wy7H1ifSTUYkRXC8cX5OkM_30P7GyG3AGgvF3qN0xwy3T3u56K2MiAadtrigTLDufI_o2hxZvVCpYU0XJ_2Rb_fhQXc-I8vMgPlczWMpDJaPyzRnGYO8zrkip5-gClBskJa7vpLax"/>
+</div>
+<div class="flex items-center justify-between px-1">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest">Recycled Paper</span>
+<div class="w-4 h-4 rounded-full border border-outline-variant flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary transition-colors">
+<div class="w-1.5 h-1.5 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</label>
+</div>
+</section>
+<!-- Footer Actions -->
+<div class="flex justify-end pt-12 border-t border-surface-variant reveal-item">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-8 py-4 rounded-DEFAULT hover:bg-inverse-surface transition-colors duration-300 shadow-sm flex items-center gap-2 group" type="button">
+                    Establish Identity
+                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+</form>
+</main>
+<!-- Lightweight JS for Sequential Reveal Animation -->
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const revealElements = document.querySelectorAll('.reveal-item');
+            
+            // Initial load animation
+            revealElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('is-visible');
+                }, 150 + (index * 200)); // Stagger delay
+            });
+        });
+    </script>
+</body></html>

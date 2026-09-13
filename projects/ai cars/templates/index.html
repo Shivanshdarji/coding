@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Car Collision Prevention</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div id="map"></div>
+    <div id="status">Status: <span class="safe">SAFE</span></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script>
+        // Initialize map
+        const map = L.map('map').setView([0, 0], 18);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        // Car markers
+        const yourCar = L.circleMarker([0, 0], {
+            color: 'blue',
+            radius: 8,
+            fillOpacity: 1
+        }).addTo(map).bindPopup("Your Car");
+
+        const otherCars = {};
+        let socket;
+        let carId = "car_" + Math.random().toString(36).substr(2, 8);
+
+        // Connect to WebSocket
+        function connectSocket() {
+            socket = io();
+
+            socket.on("connect", () => {
+                console.log("Connected to server");
+                startGPS();
+            });
+
+            socket.on("emergency_stop", (data) => {
+                if (data.car_id === carId) {
+                    document.getElementById("status").innerHTML = 
+                        'Status: <span class="danger">EMERGENCY STOP!</span>';
+                    yourCar.setStyle({color: 'red'});
+                }
+            });
+        }
+
+        // Get GPS updates
+        function startGPS() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        
+                        yourCar.setLatLng([lat, lon]);
+                        map.setView([lat, lon]);
+                        
+                        // Send to server
+                        socket.emit("update_location", {
+                            id: carId,
+                            lat: lat,
+                            lon: lon
+                        });
+                    },
+                    (error) => {
+                        console.error("GPS Error:", error);
+                    },
+                    { enableHighAccuracy: true }
+                );
+            } else {
+                alert("Geolocation not supported!");
+            }
+        }
+
+        // Initialize
+        connectSocket();
+    </script>
+</body>
+</html>

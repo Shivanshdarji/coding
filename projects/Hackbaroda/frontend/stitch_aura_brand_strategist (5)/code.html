@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding - Brand Discovery</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config Injection -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "keyframes": {
+                "reveal": {
+                    "0%": { opacity: "0", transform: "translateY(20px)" },
+                    "100%": { opacity: "1", transform: "translateY(0)" }
+                },
+                "gentle-pulse": {
+                    "0%, 100%": { opacity: "1", filter: "drop-shadow(0 0 2px rgba(24,36,27,0.1))" },
+                    "50%": { opacity: "0.8", filter: "drop-shadow(0 0 8px rgba(24,36,27,0.3))" }
+                }
+            },
+            "animation": {
+                "reveal": "reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+                "gentle-pulse": "gentle-pulse 2.5s infinite ease-in-out"
+            },
+            "colors": {
+                    "on-secondary-container": "#656461",
+                    "surface-container-low": "#f6f3f1",
+                    "on-secondary-fixed": "#1c1c19",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#c9c6c2",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#bccabd",
+                    "on-primary-container": "#95a397",
+                    "primary-container": "#2d3930",
+                    "inverse-surface": "#30302f",
+                    "on-primary": "#ffffff",
+                    "primary": "#18241b",
+                    "on-secondary-fixed-variant": "#474743",
+                    "on-surface-variant": "#434843",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c3c8c2",
+                    "tertiary-fixed": "#e9e2d4",
+                    "tertiary": "#242118",
+                    "on-primary-fixed": "#131e16",
+                    "surface-tint": "#556157",
+                    "tertiary-fixed-dim": "#ccc6b9",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#3d4a40",
+                    "surface-variant": "#e4e2e0",
+                    "surface-container-highest": "#e4e2e0",
+                    "secondary": "#5f5e5b",
+                    "on-surface": "#1b1c1b",
+                    "secondary-container": "#e5e2dd",
+                    "on-tertiary-container": "#a49e93",
+                    "on-tertiary-fixed-variant": "#4a463d",
+                    "tertiary-container": "#39362d",
+                    "surface-container": "#f0edeb",
+                    "on-background": "#1b1c1b",
+                    "outline": "#747873",
+                    "surface-dim": "#dcdad8",
+                    "primary-fixed": "#d8e6d9",
+                    "secondary-fixed": "#e5e2dd",
+                    "inverse-on-surface": "#f3f0ee",
+                    "inverse-primary": "#bccabd",
+                    "background": "#fbf9f7",
+                    "surface": "#fbf9f7",
+                    "surface-container-high": "#eae8e6",
+                    "on-tertiary-fixed": "#1e1b13",
+                    "surface-bright": "#fbf9f7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "unit": "8px",
+                    "container-max-width": "1200px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "EB Garamond"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "EB Garamond"
+                    ],
+                    "headline-md": [
+                            "EB Garamond"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Main Content Area: Centered, spacious, Quiet Luxury aesthetic -->
+<main class="flex-grow flex flex-col items-center justify-center p-margin-mobile md:p-margin-desktop w-full mx-auto max-w-container-max-width">
+<div class="w-full max-w-[800px] flex flex-col gap-16">
+<!-- Progress Indicator -->
+<div class="w-full flex items-center gap-2">
+<div class="h-[2px] flex-1 bg-primary rounded-full"></div>
+<div class="h-[2px] flex-1 bg-surface-variant rounded-full"></div>
+<div class="h-[2px] flex-1 bg-surface-variant rounded-full"></div>
+<div class="h-[2px] flex-1 bg-surface-variant rounded-full"></div>
+</div>
+<!-- Header Section -->
+<header class="text-center md:text-left flex flex-col gap-4">
+<p class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Step 1 of 4</p>
+<h1 class="font-display-lg text-display-lg text-primary animate-reveal">Discovering your brand <span class="italic">essence</span></h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-[600px] animate-reveal opacity-0" style="animation-delay: 0.15s;">
+                    To tailor your strategy, we need to understand where your brand currently stands and the visual language it speaks.
+                </p>
+</header>
+<!-- Form Flow -->
+<div class="flex flex-col gap-12">
+<!-- Instagram Link Input -->
+<section class="flex flex-col gap-4">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" for="instagram-handle">Social Presence</label>
+<div class="relative group">
+<span class="absolute left-0 bottom-[10px] text-secondary font-body-lg material-symbols-outlined text-[20px] pointer-events-none">link</span>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 pl-8 pb-2 text-body-lg font-body-lg text-on-surface transition-colors duration-300 placeholder:text-surface-dim" id="instagram-handle" placeholder="instagram.com/yourbrand" type="text"/>
+</div><button class="mt-4 font-label-caps text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+    Add another profile
+</button>
+</section><section class="flex flex-col gap-4">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" for="brand-location">
+        Brand Location
+    </label>
+<div class="relative group">
+<span class="absolute left-0 bottom-[10px] text-secondary font-body-lg material-symbols-outlined text-[20px] pointer-events-none">location_on</span>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 pl-8 pb-2 text-body-lg font-body-lg text-on-surface transition-colors duration-300 placeholder:text-surface-dim" id="brand-location" placeholder="City, Country or Remote" type="text"/>
+</div>
+</section>
+<!-- Brand Level Selection Cards -->
+<section class="flex flex-col gap-6">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+                        Current Brand Maturity
+                    </label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Option 1 -->
+<button class="group relative flex flex-col items-start text-left p-6 rounded-lg bg-surface-container-lowest border border-surface-variant hover:border-primary-fixed-dim hover:bg-surface-container-low transition-all duration-300 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-fixed focus:ring-offset-2 focus:ring-offset-background" type="button">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary mb-6 transition-colors duration-300" data-icon="seedling" data-weight="fill" style="font-variation-settings: 'FILL' 1;">eco</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Emerging</h3>
+<p class="font-body-sm text-body-sm text-secondary">Finding our voice, defining the aesthetic, and beginning to build a <span class="italic">dedicated community</span>.</p>
+</button>
+<!-- Option 2 (Active/Selected State Example) -->
+<button class="group relative flex flex-col items-start text-left p-6 rounded-lg bg-surface-container-low border border-primary transition-all duration-300 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-fixed focus:ring-offset-2 focus:ring-offset-background shadow-[0_4px_24px_rgba(24,36,27,0.04)]" type="button">
+<span class="absolute top-4 right-4 material-symbols-outlined text-primary text-[20px] animate-gentle-pulse" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="material-symbols-outlined text-primary mb-6" data-icon="auto_awesome" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Established</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Consistent identity, growing audience, looking to refine and elevate our <span class="italic">strategic positioning</span>.</p>
+</button>
+<!-- Option 3 -->
+<button class="group relative flex flex-col items-start text-left p-6 rounded-lg bg-surface-container-lowest border border-surface-variant hover:border-primary-fixed-dim hover:bg-surface-container-low transition-all duration-300 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-fixed focus:ring-offset-2 focus:ring-offset-background" type="button">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary mb-6 transition-colors duration-300" data-icon="diamond" data-weight="fill" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Premium</h3>
+<p class="font-body-sm text-body-sm text-secondary">Mature brand language, high-end positioning, seeking subtle optimizations and <span class="italic">thought leadership</span>.</p>
+</button>
+<button class="group relative flex flex-col items-start text-left p-6 rounded-lg bg-surface-container-lowest border border-surface-variant hover:border-primary-fixed-dim hover:bg-surface-container-low transition-all duration-300 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-fixed focus:ring-offset-2 focus:ring-offset-background" type="button">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary mb-6 transition-colors duration-300">edit_note</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Custom</h3>
+<p class="font-body-sm text-body-sm text-secondary">Describe your brand's <span class="italic">unique stage</span> in your own words.</p>
+</button></div>
+</section>
+<!-- Aesthetic Tags (Bento-ish asymmetric layout) -->
+<section class="flex flex-col gap-6">
+<div class="flex justify-between items-end">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+                            Aesthetic Direction
+                        </label>
+<span class="font-body-sm text-body-sm text-secondary">Select up to 3</span>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body-sm text-body-sm hover:border-primary hover:text-primary transition-colors">Minimalist</button>
+<button class="px-5 py-2 rounded-full border border-primary bg-primary text-on-primary font-body-sm text-body-sm shadow-[0_2px_8px_rgba(24,36,27,0.15)] transition-colors">Quiet Luxury</button>
+<button class="px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body-sm text-body-sm hover:border-primary hover:text-primary transition-colors">Editorial</button>
+<button class="px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body-sm text-body-sm hover:border-primary hover:text-primary transition-colors">Vibrant</button>
+<button class="px-5 py-2 rounded-full border border-primary bg-primary text-on-primary font-body-sm text-body-sm shadow-[0_2px_8px_rgba(24,36,27,0.15)] transition-colors">Monochrome</button>
+<button class="px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body-sm text-body-sm hover:border-primary hover:text-primary transition-colors">Organic</button>
+<button class="px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body-sm text-body-sm hover:border-primary hover:text-primary transition-colors">Bold</button>
+<button class="px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body-sm text-body-sm hover:border-primary hover:text-primary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">add</span>
+    Custom
+</button></div>
+</section>
+</div>
+<!-- Footer Actions -->
+<footer class="pt-8 border-t border-surface-variant flex justify-between items-center mt-4">
+<button class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+                    Back
+                </button>
+<button class="group bg-primary text-on-primary px-8 py-4 rounded-lg font-label-caps text-label-caps uppercase tracking-widest hover:bg-inverse-surface transition-colors flex items-center gap-2 shadow-[0_4px_12px_rgba(24,36,27,0.1)]" type="button">
+                    Continue
+                    <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+</button>
+</footer>
+</div>
+</main>
+<!-- Optional: Add a very subtle gradient or texture to the background body via CSS if needed, but keeping it solid Champagne per Quiet Luxury rules is preferred for legibility. -->
+</body></html>

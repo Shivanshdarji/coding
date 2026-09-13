@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aetheris - Strategy that whispers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Inter:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#bccabd",
+                        "on-primary-container": "#95a397",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "inverse-surface": "#30302f",
+                        "secondary-fixed": "#e5e2dd",
+                        "inverse-on-surface": "#f3f0ee",
+                        "surface-dim": "#dcdad8",
+                        "secondary": "#5f5e5b",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c3c8c2",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#e5e2dd",
+                        "on-surface-variant": "#434843",
+                        "on-surface": "#1b1c1b",
+                        "surface": "#fbf9f7",
+                        "primary-container": "#2d3930",
+                        "on-secondary-fixed-variant": "#474743",
+                        "tertiary-container": "#39362d",
+                        "surface-tint": "#556157",
+                        "surface-container-high": "#eae8e6",
+                        "on-secondary-container": "#656461",
+                        "background": "#fbf9f7",
+                        "on-secondary-fixed": "#1c1c19",
+                        "on-tertiary-fixed": "#1e1b13",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e4e2e0",
+                        "tertiary": "#242118",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e9e2d4",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#747873",
+                        "on-tertiary-fixed-variant": "#4a463d",
+                        "surface-container-highest": "#e4e2e0",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#a49e93",
+                        "surface-container-low": "#f6f3f1",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d8e6d9",
+                        "primary": "#18241b",
+                        "tertiary-fixed-dim": "#ccc6b9",
+                        "on-primary-fixed": "#131e16",
+                        "inverse-primary": "#bccabd",
+                        "on-background": "#1b1c1b",
+                        "surface-container": "#f0edeb",
+                        "surface-bright": "#fbf9f7",
+                        "on-primary-fixed-variant": "#3d4a40"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "container-max-width": "1200px",
+                        "unit": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["EB Garamond"],
+                        "headline-md": ["EB Garamond"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["EB Garamond"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md fixed top-0 w-full z-50 bg-transparent flat no shadows transition-all duration-500 ease-in-out">
+<div class="flex justify-between items-center max-w-container-max-width mx-auto px-margin-desktop py-6">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary-fixed">Aetheris</div>
+<nav class="hidden md:flex gap-gutter font-body-md text-body-md tracking-tight">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Platform</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Methodology</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Insights</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Pricing</a>
+</nav>
+<button class="font-body-md text-body-md tracking-tight text-on-primary bg-primary hover:bg-on-surface-variant transition-colors duration-300 px-6 py-2.5 rounded-full flex items-center gap-2 shadow-sm">
+                Sign in with Google
+            </button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto w-full flex flex-col gap-32">
+<!-- Hero Section -->
+<section class="flex flex-col items-center text-center max-w-3xl mx-auto pt-16 md:pt-32 gap-8">
+<h1 class="font-display-lg text-[64px] leading-[1.1] md:text-[80px] text-primary tracking-tighter font-medium">
+                Strategy that <em class="italic font-light opacity-90">whispers</em> where others shout.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">
+                Aetheris provides high-fidelity, empathy-led AI content strategy. We synthesize complex data into elegant, actionable insights for brands that value substance over noise.
+            </p>
+<div class="mt-8 flex gap-4">
+<button class="bg-primary text-on-primary font-body-md px-8 py-4 rounded-full hover:bg-on-surface-variant transition-all duration-300 shadow-lg shadow-primary/10 flex items-center gap-3">
+                    Sign in with Google <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="mt-24 w-full aspect-[21/9] rounded-xl overflow-hidden relative shadow-2xl shadow-primary/5 bg-surface-container-low border border-outline-variant/20">
+<img alt="Editorial workspace" class="w-full h-full object-cover opacity-90" data-alt="A highly aesthetic, minimalist architectural interior space bathed in soft, natural daylight. The room features elegant, clean lines, subtle ivory and charcoal tones, and generous empty space, evoking a sense of quiet luxury, calm contemplation, and high-end editorial design. The lighting is bright but diffused, creating extremely soft, ambient shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3uszpMUIqqa-LfwGCnT-LZxmqkacuC1THPx5_coSOFJazdvVc9NtsGRF8Mf63s-jJ0yvAv-z8YYyeTUjg6xmMON-t95bTiyQv47OO2Z7mW0_m5znDfNDvDxBFIZ1jNgELv2_WUAMJ2SYTRlqQY8RRA0T7dzOlmvqDobPieotVJw5KgIx2gIjkgEZiZiJwJ3bQDqguGOTKa22M6viOTyRbQP5YvGgep_AuI6j75-8wPmaFoH8nv_6M2Stlkgr6mnpUJ3E101rhj83p"/>
+</div>
+</section>
+<!-- Methodology Section -->
+<section class="flex flex-col gap-16 pt-16 border-t border-outline-variant/30">
+<div class="flex flex-col md:flex-row gap-8 justify-between items-start">
+<div class="md:w-1/3">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-4 block">Methodology</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Art of <br/><em class="italic font-light">Quiet Intelligence</em></h2>
+</div>
+<div class="md:w-1/2 font-body-lg text-body-lg text-on-surface-variant flex flex-col gap-6">
+<p>
+                        We reject the chaotic, high-volume output of standard AI. Our methodology is rooted in curated restraint. We train our models not just on data, but on the principles of empathy, narrative pacing, and editorial discretion.
+                    </p>
+<p>
+                        The result is a strategic framework that aligns seamlessly with premium brand identities, offering guidance that feels profoundly human.
+                    </p>
+</div>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+<div class="bg-surface-container-low p-10 rounded-2xl border border-outline-variant/30 flex flex-col gap-6 hover:bg-surface-container-high transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-[32px]">psychology</span>
+<h3 class="font-headline-md text-headline-md text-primary">Empathy-Led Processing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Algorithms calibrated to understand nuance, cultural context, and emotional resonance before generating strategy.</p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-2xl border border-outline-variant/30 flex flex-col gap-6 hover:bg-surface-container-high transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-[32px]">filter_list</span>
+<h3 class="font-headline-md text-headline-md text-primary">Curated Restraint</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prioritizing high-fidelity insights over infinite variations. We deliver one perfect direction rather than ten mediocre ones.</p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-2xl border border-outline-variant/30 flex flex-col gap-6 hover:bg-surface-container-high transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-[32px]">auto_awesome</span>
+<h3 class="font-headline-md text-headline-md text-primary">Editorial Polish</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Output that reads like it was crafted by a senior strategist at a high-end agency, ready for immediate executive review.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest w-full py-16 border-t border-outline-variant/30 flat no shadows mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max-width mx-auto px-margin-desktop gap-gutter">
+<div class="font-display-lg text-headline-sm text-primary dark:text-primary-fixed">Aetheris</div>
+<div class="flex gap-6 font-body-sm text-body-sm">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 opacity-80 hover:opacity-100 transition-opacity" href="#">Contact</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 opacity-80 hover:opacity-100 transition-opacity" href="#">Ethics AI</a>
+</div>
+<div class="font-body-sm text-body-sm text-secondary dark:text-on-secondary-container">
+                © 2024 Aetheris Strategy. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

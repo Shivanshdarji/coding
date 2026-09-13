@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppDice - Automation, Web & UI/UX Solutions</title>
+    <style>
+        :root {
+            --primary: #6e48aa;
+            --secondary: #9d50bb;
+            --accent: #4776E6;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 5rem 10%;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #555;
+        }
+        
+        section {
+            padding: 4rem 10%;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            color: var(--primary);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 2px solid #eee;
+        }
+        
+        .pricing-card.popular {
+            border: 2px solid var(--primary);
+            position: relative;
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+        
+        .price span {
+            font-size: 1rem;
+            color: #777;
+        }
+        
+        .feature-list {
+            margin: 1.5rem 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            color: var(--primary);
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .testimonial {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin: 0;
+            color: var(--primary);
+        }
+        
+        .author-info p {
+            margin: 0;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 10%;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo-img {
+            height: 30px;
+            width: auto;
+        }
+        
+        .footer-logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                margin: 1rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .auth-buttons {
+                margin-top: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/40x40/6e48aa/ffffff?text=AD" alt="AppDice Logo" class="logo-img">
+            <div class="logo-text">AppDice</div>
+        </div>
+        <div class="nav-links">
+            <a href="#how-to-build">How To Build</a>
+            <a href="#documentation">Documentation</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#features">Features</a>
+            <a href="#login">Login</a>
+        </div>
+        <div class="auth-buttons">
+            <button class="btn btn-outline">Login</button>
+            <button class="btn btn-primary">Register Now</button>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <h1>AI-Powered Automation Solutions</h1>
+        <p>Drive more efficiency and increase productivity by up to 90% using our cutting-edge automation, web, and UI/UX solutions.</p>
+        <button class="btn btn-primary">Get Started Now!</button>
+    </section>
+    
+    <section id="features">
+        <h2 class="section-title">Our Powerful Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Design & Automate</h3>
+                <p>Start with no-code templates. Tweak and integrate with any service effortlessly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Built-in Growth Templates</h3>
+                <p>Premium templates for a quick start in minutes. Customize to fit your needs.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Drag & Drop Builder</h3>
+                <p>Easily move and arrange elements, simplifying tasks and enhancing user experience.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Built-in Integrations</h3>
+                <p>Connect with your favorite apps to boost productivity across all channels.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Segment Audience</h3>
+                <p>Categorize your audience to send personalized offers and communications.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Broadcast</h3>
+                <p>Keep your clients informed and engaged by sending them updates and offers.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section style="background: #f8f9fa;">
+        <h2 class="section-title">60% Rise In Productivity</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">Deploy our solutions to filter the first level of inbound conversations and focus on what matters most.</p>
+        <div style="text-align: center;">
+            <div style="width: 200px; height: 200px; margin: 0 auto; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">60%</div>
+        </div>
+    </section>
+    
+    <section id="testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="features-grid">
+            <div class="testimonial">
+                <p>"Everything I wanted for a complete automation solution. AppDice has transformed our workflow."</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mark Winston">
+                    <div class="author-info">
+                        <h4>Mark Winston</h4>
+                        <p>CEO, Alpha Travels</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>"Our messaging channels now perform 3x better than emails thanks to AppDice's solutions."</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Lucy Carry">
+                    <div class="author-info">
+                        <h4>Lucy Carry</h4>
+                        <p>Marketing Director, Apple Inc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="pricing" style="background: #f8f9fa;">
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <div class="price">$49 <span>/month</span></div>
+                <p>Perfect for small businesses</p>
+                <ul class="feature-list">
+                    <li>Unlimited Contacts</li>
+                    <li>Unlimited Broadcasts</li>
+                    <li>Unlimited Messages</li>
+                    <li>Basic Automations</li>
+                    <li>Train On Your Data</li>
+                </ul>
+                <button class="btn btn-outline" style="width: 100%;">Get Started</button>
+            </div>
+            <div class="pricing-card popular">
+                <div class="popular-badge">Popular</div>
+                <h3>Pro</h3>
+                <div class="price">$480 <span>/year</span></div>
+                <p>Save $108 annually</p>
+                <ul class="feature-list">
+                    <li>Everything in Starter</li>
+                    <li>Priority Support</li>
+                    <li>Unlimited Team Members</li>
+                    <li>Advanced Analytics</li>
+                    <li>Access To All Integrations</li>
+                    <li>AI Appointment Setter</li>
+                </ul>
+                <button class="btn btn-primary" style="width: 100%;">Get Started</button>
+            </div>
+        </div>
+    </section>
+    
+    <section style="text-align: center; padding: 5rem 10%; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white;">
+        <div class="logo-container" style="justify-content: center;">
+            <img src="https://via.placeholder.com/60x60/ffffff/6e48aa?text=AD" alt="AppDice Logo" class="logo-img" style="height: 60px;">
+            <div class="logo-text" style="color: white; -webkit-text-fill-color: white; font-size: 2.5rem;">AppDice</div>
+        </div>
+        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Ready to Transform Your Business?</h2>
+        <p style="max-width: 700px; margin: 0 auto 2rem; font-size: 1.2rem;">Join 3,500+ businesses using AppDice to reach their customers more effectively.</p>
+        <button class="btn btn-primary" style="background: white; color: var(--primary); font-size: 1.1rem; padding: 0.8rem 2rem;">Get Started With AppDice</button>
+    </section>
+    
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-links">
+                <div class="footer-logo">
+                    <img src="https://via.placeholder.com/30x30/ffffff/6e48aa?text=AD" alt="AppDice Logo" class="footer-logo-img">
+                    <div class="footer-logo-text">AppDice</div>
+                </div>
+                <p>Your complete automation, web development, and UI/UX solution.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/appdice/" target="_blank">Instagram</a>
+                    <a href="https://www.linkedin.com/company/appdice/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#how-to-build">How To Build</a></li>
+                    <li><a href="#documentation">Documentation</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#features">Features</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#cookies">Cookies Settings</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 AppDice. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

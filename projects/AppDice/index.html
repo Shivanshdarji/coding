@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppDice - Automating Your Future</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #D3B435; /* Exact Figma color */
+            --primary-light: rgba(211, 180, 53, 0.2);
+            --primary-dark: #b89a2d;
+            --dark: #000000;
+            --darker: #0a0a0a;
+            --light: #f5f5f5;
+            --gray: #2a2a2a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header Styles */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo-img {
+            height: 60px; /* Adjust as needed */
+            width: auto;
+            margin-right: 15px;
+        }
+        
+        .logo-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(211, 180, 53, 0.3);
+        }
+        
+        .logo-text .app {
+            color: var(--primary);
+        }
+        
+        .logo-text .dice {
+            color: var(--light);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            color: var(--primary);
+            letter-spacing: 1px;
+            opacity: 0.9;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        /* Countdown Section */
+        .countdown-container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .countdown-title {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            text-align: center;
+        }
+        
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            padding: 0.5rem 1.5rem;
+            background-color: var(--primary-light);
+            border-radius: 8px;
+            min-width: 100px;
+            box-shadow: 0 4px 15px rgba(211, 180, 53, 0.2);
+            border: 1px solid rgba(211, 180, 53, 0.3);
+        }
+        
+        .countdown-label {
+            margin-top: 0.8rem;
+            font-size: 1rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        
+        /* About Us Section */
+        .about-section {
+            background-color: var(--darker);
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 4rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(211, 180, 53, 0.1);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            bottom: -10px;
+            left: 0;
+            background: var(--primary);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            line-height: 1.8;
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-image {
+            background-color: rgba(211, 180, 53, 0.05);
+            border: 1px solid rgba(211, 180, 53, 0.1);
+            border-radius: 10px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-align: center;
+            line-height: 1.5;
+            padding: 2rem;
+            box-shadow: inset 0 0 20px rgba(211, 180, 53, 0.05);
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            text-align: center;
+            margin: 4rem 0;
+        }
+        
+        .contact-item {
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            opacity: 0.7;
+        }
+        
+        .social-link:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+            text-shadow: 0 0 10px rgba(211, 180, 53, 0.5);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--gray);
+            margin-top: 3rem;
+            color: var(--primary);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .countdown {
+                gap: 1rem;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+                min-width: 80px;
+                padding: 0.5rem 1rem;
+            }
+            
+            .logo-text {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <!-- Add your logo image path here -->
+                <img src="https://static.wixstatic.com/media/88a964_5120a191e1ea4e02af0188d41be44e11~mv2.png" alt="AppDice Logo" class="logo-img">
+                <div class="logo-text"><span class="app">App</span><span class="dice">Dice</span></div>
+            </div>
+            <h1 class="tagline">Automating Your Future</h1>
+        </header>
+        
+        <div class="countdown-container">
+            <h2 class="countdown-title">Launching in...</h2>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+        
+        <section class="about-section" id="about">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>AppDice is at the forefront of automation technology, delivering innovative solutions that transform businesses and streamline operations. Our expertise lies in creating intelligent systems that work seamlessly behind the scenes.</p>
+                    <p>Founded with a vision to revolutionize how companies approach automation, we combine cutting-edge technology with practical applications to deliver measurable results.</p>
+                    <p>Our team of experts specializes in developing custom automation solutions tailored to your specific business needs, ensuring you stay ahead in today's competitive landscape.</p>
+                </div>
+                <div class="about-image">
+                    INNOVATION<br>
+                    AUTOMATION<br>
+                    TRANSFORMATION
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact-info" id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i> contact.appdice@gmail.com
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i> +91 7984207959
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/appdice/" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 AppDice. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Check if we already have a target date in localStorage
+        let countDownDate;
+        const storedDate = localStorage.getItem('countdownTarget');
+        
+        if (storedDate) {
+            // Use the stored date
+            countDownDate = new Date(parseInt(storedDate));
+        } else {
+            // Set a new target date (6 days from now) and store it
+            countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 6);
+            localStorage.setItem('countdownTarget', countDownDate.getTime());
+        }
+        
+        // Update the count down every 1 second
+        const countdownFunction = setInterval(function() {
+            // Get today's date and time
+            const now = new Date().getTime();
+            
+            // Find the distance between now and the count down date
+            const distance = countDownDate - now;
+            
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Output the result in elements with id
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = Math.floor(hours).toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = Math.floor(minutes).toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = Math.floor(seconds).toString().padStart(2, '0');
+            
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

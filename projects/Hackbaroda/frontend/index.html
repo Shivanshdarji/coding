@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Aetheris — AI Brand Strategy That Whispers</title>
+    <meta name="description" content="Aetheris provides high-fidelity, empathy-led AI content strategy. Elegant, actionable insights for brands that value substance over noise." />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Tailwind Design System Config (Single Source of Truth from DESIGN.md) -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#fbf9f7",
+                        "surface-dim": "#dcdad8",
+                        "surface-bright": "#fbf9f7",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f6f3f1",
+                        "surface-container": "#f0edeb",
+                        "surface-container-high": "#eae8e6",
+                        "surface-container-highest": "#e4e2e0",
+                        "on-surface": "#1b1c1b",
+                        "on-surface-variant": "#434843",
+                        "inverse-surface": "#30302f",
+                        "inverse-on-surface": "#f3f0ee",
+                        "outline": "#747873",
+                        "outline-variant": "#c3c8c2",
+                        "surface-tint": "#556157",
+                        "primary": "#18241b",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#2d3930",
+                        "on-primary-container": "#95a397",
+                        "inverse-primary": "#bccabd",
+                        "secondary": "#5f5e5b",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e5e2dd",
+                        "on-secondary-container": "#656461",
+                        "tertiary": "#242118",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#39362d",
+                        "on-tertiary-container": "#a49e93",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#d8e6d9",
+                        "primary-fixed-dim": "#bccabd",
+                        "on-primary-fixed": "#131e16",
+                        "on-primary-fixed-variant": "#3d4a40",
+                        "secondary-fixed": "#e5e2dd",
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "on-secondary-fixed": "#1c1c19",
+                        "on-secondary-fixed-variant": "#474743",
+                        "tertiary-fixed": "#e9e2d4",
+                        "tertiary-fixed-dim": "#ccc6b9",
+                        "on-tertiary-fixed": "#1e1b13",
+                        "on-tertiary-fixed-variant": "#4a463d",
+                        "background": "#fbf9f7",
+                        "on-background": "#1b1c1b",
+                        "surface-variant": "#e4e2e0"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "sm": "0.25rem",
+                        "md": "0.75rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "unit": "8px",
+                        "container-max-width": "1200px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "40px"
+                    },
+                    fontFamily: {
+                        "display": ["EB Garamond", "serif"],
+                        "headline": ["EB Garamond", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "500" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "500" }],
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+                        "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-background text-on-background min-h-screen font-body antialiased overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+<!-- ============================================================ -->
+<!-- PAGE 1: LANDING PAGE                                         -->
+<!-- ============================================================ -->
+<section id="page-landing" class="page-section active">
+    <!-- Sticky Navigation -->
+    <header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 transition-all duration-500">
+        <div class="flex justify-between items-center max-w-[1200px] mx-auto px-5 md:px-10 py-6">
+            <div class="font-display text-headline-md tracking-tighter text-primary">Aetheris</div>
+            <nav class="hidden md:flex gap-6 font-body text-body-md tracking-tight">
+                <a class="text-secondary hover:text-primary transition-colors duration-300" href="#methodology">Platform</a>
+                <a class="text-secondary hover:text-primary transition-colors duration-300" href="#methodology">Methodology</a>
+                <a class="text-secondary hover:text-primary transition-colors duration-300" href="#insights">Insights</a>
+                <a class="text-secondary hover:text-primary transition-colors duration-300" href="#pricing">Pricing</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <button data-navigate="onboarding-1" class="font-body text-body-md tracking-tight text-on-primary bg-primary hover:bg-on-surface-variant transition-colors duration-300 px-6 py-2.5 rounded-full flex items-center gap-2 shadow-sm">
+                    Sign in with Google
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav -->
+        <div id="mobile-nav" class="hidden md:hidden px-5 pb-6 flex-col gap-4 font-body text-body-md">
+            <a class="text-secondary hover:text-primary transition-colors block py-2" href="#methodology">Platform</a>
+            <a class="text-secondary hover:text-primary transition-colors block py-2" href="#methodology">Methodology</a>
+            <a class="text-secondary hover:text-primary transition-colors block py-2" href="#insights">Insights</a>
+            <a class="text-secondary hover:text-primary transition-colors block py-2" href="#pricing">Pricing</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-24 px-5 md:px-10 max-w-[1200px] mx-auto w-full flex flex-col gap-32">
+
+        <!-- Hero Section -->
+        <section class="flex flex-col items-center text-center max-w-3xl mx-auto pt-16 md:pt-32 gap-8 reveal-item">
+            <h1 class="font-display text-[48px] leading-[1.1] md:text-[80px] text-primary tracking-tighter font-medium">
+                Strategy that <em class="italic font-light opacity-90">whispers</em> where others shout.
+            </h1>
+            <p class="font-body text-body-lg text-on-surface-variant max-w-2xl mt-4">
+                Aetheris provides high-fidelity, empathy-led AI content strategy. We synthesize complex data into elegant, actionable insights for brands that value substance over noise.
+            </p>
+            <div class="mt-8 flex gap-4">
+                <button data-navigate="onboarding-1" class="bg-primary text-on-primary font-body px-8 py-4 rounded-full hover:bg-on-surface-variant transition-all duration-300 shadow-lg shadow-primary/10 flex items-center gap-3">
+                    Sign in with Google <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </button>
+            </div>
+            <div class="mt-24 w-full aspect-[21/9] rounded-xl overflow-hidden relative shadow-2xl shadow-primary/5 bg-surface-container-low border border-outline-variant/20">
+                <img alt="Editorial workspace" class="w-full h-full object-cover opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3uszpMUIqqa-LfwGCnT-LZxmqkacuC1THPx5_coSOFJazdvVc9NtsGRF8Mf63s-jJ0yvAv-z8YYyeTUjg6xmMON-t95bTiyQv47OO2Z7mW0_m5znDfNDvDxBFIZ1jNgELv2_WUAMJ2SYTRlqQY8RRA0T7dzOlmvqDobPieotVJw5KgIx2gIjkgEZiZiJwJ3bQDqguGOTKa22M6viOTyRbQP5YvGgep_AuI6j75-8wPmaFoH8nv_6M2Stlkgr6mnpUJ3E101rhj83p" />
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section id="methodology" class="flex flex-col gap-16 pt-16 border-t border-outline-variant/30 reveal-item">
+            <div class="flex flex-col md:flex-row gap-8 justify-between items-start">
+                <div class="md:w-1/3">
+                    <span class="font-label text-label-caps text-secondary uppercase tracking-widest mb-4 block">Methodology</span>
+                    <h2 class="font-headline text-headline-lg text-primary">The Art of <br /><em class="italic font-light">Quiet Intelligence</em></h2>
+                </div>
+                <div class="md:w-1/2 font-body text-body-lg text-on-surface-variant flex flex-col gap-6">
+                    <p>We reject the chaotic, high-volume output of standard AI. Our methodology is rooted in curated restraint. We train our models not just on data, but on the principles of empathy, narrative pacing, and editorial discretion.</p>
+                    <p>The result is a strategic framework that aligns seamlessly with premium brand identities, offering guidance that feels profoundly human.</p>
+                </div>
+            </div>
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="bg-surface-container-low p-10 rounded-2xl border border-outline-variant/30 flex flex-col gap-6 hover:bg-surface-container-high transition-colors duration-500 reveal-item">
+                    <span class="material-symbols-outlined text-primary text-[32px]">psychology</span>
+                    <h3 class="font-headline text-headline-md text-primary">Empathy-Led Processing</h3>
+                    <p class="font-body text-body-sm text-on-surface-variant">Algorithms calibrated to understand nuance, cultural context, and emotional resonance before generating strategy.</p>
+                </div>
+                <div class="bg-surface-container-low p-10 rounded-2xl border border-outline-variant/30 flex flex-col gap-6 hover:bg-surface-container-high transition-colors duration-500 reveal-item">
+                    <span class="material-symbols-outlined text-primary text-[32px]">filter_list</span>
+                    <h3 class="font-headline text-headline-md text-primary">Curated Restraint</h3>
+                    <p class="font-body text-body-sm text-on-surface-variant">Prioritizing high-fidelity insights over infinite variations. We deliver one perfect direction rather than ten mediocre ones.</p>
+                </div>
+                <div class="bg-surface-container-low p-10 rounded-2xl border border-outline-variant/30 flex flex-col gap-6 hover:bg-surface-container-high transition-colors duration-500 reveal-item">
+                    <span class="material-symbols-outlined text-primary text-[32px]">auto_awesome</span>
+                    <h3 class="font-headline text-headline-md text-primary">Editorial Polish</h3>
+                    <p class="font-body text-body-sm text-on-surface-variant">Output that reads like it was crafted by a senior strategist at a high-end agency, ready for immediate executive review.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low w-full py-16 border-t border-outline-variant/30 mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center max-w-[1200px] mx-auto px-10 gap-6">
+            <div class="font-display text-headline-md text-primary">Aetheris</div>
+            <div class="flex gap-6 font-body text-body-sm">
+                <a class="text-secondary hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+                <a class="text-secondary hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+                <a class="text-secondary hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Contact</a>
+                <a class="text-secondary hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Ethics AI</a>
+            </div>
+            <div class="font-body text-body-sm text-secondary">
+                &copy; 2025 Aetheris Strategy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PAGE 2: ONBOARDING STEP 1 — Brand Discovery                 -->
+<!-- ============================================================ -->
+<section id="page-onboarding-1" class="page-section">
+    <main class="min-h-screen flex flex-col items-center justify-center p-5 md:p-10 w-full mx-auto max-w-[1200px]">
+        <div class="w-full max-w-[800px] flex flex-col gap-16">
+
+            <!-- Progress Bar -->
+            <div class="w-full flex items-center gap-2">
+                <div class="progress-step h-[3px] flex-1 bg-primary rounded-full"></div>
+                <div class="progress-step h-[3px] flex-1 bg-surface-variant rounded-full"></div>
+                <div class="progress-step h-[3px] flex-1 bg-surface-variant rounded-full"></div>
+                <div class="progress-step h-[3px] flex-1 bg-surface-variant rounded-full"></div>
+            </div>
+
+            <!-- Header -->
+            <header class="text-center md:text-left flex flex-col gap-4 reveal-item">
+                <p class="font-label text-label-caps text-secondary uppercase tracking-widest">Step 1 of 4</p>
+                <h1 class="font-display text-display-lg text-primary">Discovering your brand <span class="italic">essence</span></h1>
+                <p class="font-body text-body-lg text-secondary max-w-[600px]">
+                    To tailor your strategy, we need to understand where your brand currently stands and the visual language it speaks.
+                </p>
+            </header>
+
+            <!-- Form -->
+            <div class="flex flex-col gap-12">
+
+                <!-- Social Presence -->
+                <section class="flex flex-col gap-4 reveal-item">
+                    <label class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest" for="instagram-handle">Social Presence</label>
+                    <div id="social-profiles-container">
+                        <div class="relative group social-input-row">
+                            <span class="absolute left-0 bottom-[10px] text-secondary material-symbols-outlined text-[20px] pointer-events-none">link</span>
+                            <input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 pl-8 pb-2 text-body-lg font-body text-on-surface transition-colors duration-300 placeholder:text-surface-dim" id="instagram-handle" placeholder="instagram.com/yourbrand" type="text" />
+                        </div>
+                    </div>
+                    <button id="btn-add-profile" class="mt-2 font-label text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest flex items-center gap-2" type="button">
+                        <span class="material-symbols-outlined text-[16px]">add</span>
+                        Add another profile
+                    </button>
+                </section>
+
+                <!-- Brand Location -->
+                <section class="flex flex-col gap-4 reveal-item">
+                    <label class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest" for="brand-location">Brand Location</label>
+                    <div class="relative group">
+                        <span class="absolute left-0 bottom-[10px] text-secondary material-symbols-outlined text-[20px] pointer-events-none">location_on</span>
+                        <input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 pl-8 pb-2 text-body-lg font-body text-on-surface transition-colors duration-300 placeholder:text-surface-dim" id="brand-location" placeholder="City, Country or Remote" type="text" />
+                    </div>
+                </section>
+
+                <!-- Content Niche (required for pipeline) -->
+                <section class="flex flex-col gap-4 reveal-item">
+                    <label class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest" for="content-niche">Content Niche <span class="text-error">*</span></label>
+                    <div class="relative group">
+                        <span class="absolute left-0 bottom-[10px] text-secondary material-symbols-outlined text-[20px] pointer-events-none">category</span>
+                        <input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 pl-8 pb-2 text-body-lg font-body text-on-surface transition-colors duration-300 placeholder:text-surface-dim" id="content-niche" placeholder="e.g. music, fitness, fashion, quiet luxury" type="text" required />
+                    </div>
+                    <p class="font-body text-body-sm text-secondary">The Instagram niche we'll scrape and analyze for your strategy.</p>
+                </section>
+
+                <!-- Target Hashtags -->
+                <section class="flex flex-col gap-4 reveal-item">
+                    <label class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest" for="content-hashtags">Target Hashtags <span class="text-error">*</span></label>
+                    <div class="relative group">
+                        <span class="absolute left-0 bottom-[10px] text-secondary material-symbols-outlined text-[20px] pointer-events-none">tag</span>
+                        <input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 pl-8 pb-2 text-body-lg font-body text-on-surface transition-colors duration-300 placeholder:text-surface-dim" id="content-hashtags" placeholder="kpop, reels, fitness (comma separated)" type="text" required />
+                    </div>
+                </section>
+
+                <!-- Target Country -->
+                <section class="flex flex-col gap-4 reveal-item">
+                    <label class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest" for="content-country">Target Country</label>
+                    <div class="relative group">
+                        <span class="absolute left-0 bottom-[10px] text-secondary material-symbols-outlined text-[20px] pointer-events-none">public</span>
+                        <select class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 pl-8 pb-2 text-body-lg font-body text-on-surface transition-colors duration-300" id="content-country">
+                            <option value="United States">United States</option>
+                        </select>
+                    </div>
+                    <p class="font-body text-body-sm text-secondary">Instagram Explore region for trending content scraping.</p>
+                </section>
+
+                <!-- Brand Maturity Cards -->
+                <section class="flex flex-col gap-6 reveal-item">
+                    <label class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest">Current Brand Maturity</label>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <button class="maturity-card group relative flex flex-col items-start text-left p-6 rounded-lg bg-surface-container-lowest border border-surface-variant hover:border-primary-fixed-dim hover:bg-surface-container-low transition-all duration-300 active:scale-[0.98] focus:outline-none" type="button" data-value="emerging">
+                            <span class="material-symbols-outlined text-secondary group-hover:text-primary mb-6 transition-colors duration-300" style="font-variation-settings: 'FILL' 1;">eco</span>
+                            <h3 class="font-headline text-headline-md text-primary mb-2">Emerging</h3>
+                            <p class="font-body text-body-sm text-secondary">Finding our voice, defining the aesthetic, and beginning to build a <span class="italic">dedicated community</span>.</p>
+                        </button>
+                        <button class="maturity-card group relative flex flex-col items-start text-left p-6 rounded-lg bg-surface-container-lowest border border-surface-variant hover:border-primary-fixed-dim hover:bg-surface-container-low transition-all duration-300 active:scale-[0.98] focus:outline-none" type="button" data-value="established">
+                            <span class="material-symbols-outlined text-secondary group-hover:text-primary mb-6 transition-colors duration-300" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                            <h3 class="font-headline text-headline-md text-primary mb-2">Established</h3>
+                            <p class="font-body text-body-sm text-secondary">Consistent identity, growing audience, looking to refine and elevate our <span class="italic">strategic positioning</span>.</p>
+                        </button>
+                        <button class="maturity-card group relative flex flex-col items-start text-left p-6 rounded-lg bg-surface-container-lowest border border-surface-variant hover:border-primary-fixed-dim hover:bg-surface-container-low transition-all duration-300 active:scale-[0.98] focus:outline-none" type="button" data-value="premium">
+                            <span class="material-symbols-outlined text-secondary group-hover:text-primary mb-6 transition-colors duration-300" style="font-variation-settings: 'FILL' 1;">diamond</span>
+                            <h3 class="font-headline text-headline-md text-primary mb-2">Premium</h3>
+                            <p class="font-body text-body-sm text-secondary">Mature brand language, high-end positioning, seeking subtle optimizations and <span class="italic">thought leadership</span>.</p>
+                        </button>
+                    </div>
+                    <button class="maturity-card group relative flex flex-col items-start text-left p-6 rounded-lg bg-surface-container-lowest border border-surface-variant hover:border-primary-fixed-dim hover:bg-surface-container-low transition-all duration-300 active:scale-[0.98] focus:outline-none md:max-w-[calc(33.333%-1rem)]" type="button" data-value="custom">
+                        <span class="material-symbols-outlined text-secondary group-hover:text-primary mb-6 transition-colors duration-300">edit_note</span>
+                        <h3 class="font-headline text-headline-md text-primary mb-2">Custom</h3>
+                        <p class="font-body text-body-sm text-secondary">Describe your brand's <span class="italic">unique stage</span> in your own words.</p>
+                    </button>
+                    <textarea id="custom-maturity-input" class="hidden w-full md:max-w-[calc(33.333%-1rem)] bg-surface border border-outline-variant rounded-lg p-4 font-body text-body-md focus:border-primary focus:ring-0 transition-colors duration-200 placeholder:text-on-tertiary-container mt-2" placeholder="Describe your brand's unique stage..." rows="3"></textarea>
+                </section>
+
+                <!-- Aesthetic Direction Tags -->
+                <section class="flex flex-col gap-6 reveal-item">
+                    <div class="flex justify-between items-end">
+                        <label class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest">Aesthetic Direction</label>
+                        <span class="font-body text-body-sm text-secondary">Select up to 3</span>
+                    </div>
+                    <div id="aesthetic-chips-container" class="flex flex-wrap gap-3">
+                        <button class="aesthetic-chip px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body text-body-sm hover:border-primary hover:text-primary transition-colors" type="button" data-value="minimalist">Minimalist</button>
+                        <button class="aesthetic-chip px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body text-body-sm hover:border-primary hover:text-primary transition-colors" type="button" data-value="quiet-luxury">Quiet Luxury</button>
+                        <button class="aesthetic-chip px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body text-body-sm hover:border-primary hover:text-primary transition-colors" type="button" data-value="editorial">Editorial</button>
+                        <button class="aesthetic-chip px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body text-body-sm hover:border-primary hover:text-primary transition-colors" type="button" data-value="vibrant">Vibrant</button>
+                        <button class="aesthetic-chip px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body text-body-sm hover:border-primary hover:text-primary transition-colors" type="button" data-value="monochrome">Monochrome</button>
+                        <button class="aesthetic-chip px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body text-body-sm hover:border-primary hover:text-primary transition-colors" type="button" data-value="organic">Organic</button>
+                        <button class="aesthetic-chip px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body text-body-sm hover:border-primary hover:text-primary transition-colors" type="button" data-value="bold">Bold</button>
+                        <button class="aesthetic-chip px-5 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-secondary font-body text-body-sm hover:border-primary hover:text-primary transition-colors flex items-center gap-2" type="button" data-value="custom">
+                            <span class="material-symbols-outlined text-[16px]">add</span> Custom
+                        </button>
+                    </div>
+                    <input id="custom-aesthetic-input" class="hidden w-full md:max-w-xs bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 pb-2 text-body-md font-body text-on-surface transition-colors duration-300 placeholder:text-surface-dim" placeholder="Type your custom aesthetic..." type="text" />
+                </section>
+            </div>
+
+            <!-- Footer Actions -->
+            <footer class="pt-8 border-t border-surface-variant flex justify-between items-center mt-4">
+                <button data-navigate="landing" class="font-label text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest flex items-center gap-2" type="button">
+                    <span class="material-symbols-outlined text-[16px]">arrow_back</span> Back
+                </button>
+                <button data-navigate="onboarding-2" class="group bg-primary text-on-primary px-8 py-4 rounded-lg font-label text-label-caps uppercase tracking-widest hover:bg-inverse-surface transition-colors flex items-center gap-2 shadow-sm" type="button">
+                    Continue
+                    <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </button>
+            </footer>
+        </div>
+    </main>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PAGE 3: ONBOARDING STEP 2 — Goal Setting                    -->
+<!-- ============================================================ -->
+<section id="page-onboarding-2" class="page-section">
+    <main class="min-h-screen flex flex-col items-center justify-center p-5 md:p-10">
+        <div class="w-full max-w-xl">
+
+            <!-- Header with Progress -->
+            <header class="w-full px-0 py-8 flex justify-between items-center mb-8">
+                <div class="font-headline text-headline-md text-primary tracking-tight">Studio</div>
+                <div class="flex items-center gap-2">
+                    <span class="w-12 h-1 bg-primary rounded-full"></span>
+                    <span class="w-12 h-1 bg-primary rounded-full"></span>
+                    <span class="w-12 h-1 bg-surface-variant rounded-full"></span>
+                </div>
+            </header>
+
+            <!-- Title -->
+            <div class="text-center mb-16 reveal-item">
+                <h1 class="font-display text-display-lg text-primary mb-4">Define your <i class="italic">objective</i></h1>
+                <p class="font-body text-body-lg text-on-surface-variant">Select the primary outcome you wish to achieve with this strategy. We will tailor the architectural approach accordingly.</p>
+            </div>
+
+            <!-- Goal Selection Form -->
+            <form class="flex flex-col gap-4" id="goal-form">
+                <!-- Option 1: Engagement -->
+                <label class="goal-option relative cursor-pointer group reveal-item">
+                    <input checked class="peer sr-only" name="goal" type="radio" value="engagement" />
+                    <div class="w-full p-6 md:p-8 rounded-lg border border-surface-variant bg-surface-container-low transition-all duration-300 hover:bg-surface-container hover:border-outline-variant peer-checked:border-primary peer-checked:bg-surface-container-high flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-full bg-surface text-primary flex items-center justify-center shrink-0 border border-surface-variant shadow-sm">
+                            <span class="material-symbols-outlined text-[24px]">vital_signs</span>
+                        </div>
+                        <div class="flex-grow pt-1">
+                            <h2 class="font-headline text-headline-md text-primary mb-1"><i class="italic">Deep Engagement</i></h2>
+                            <p class="font-body text-body-md text-on-surface-variant">Foster meaningful conversations, increase dwell time, and build a highly interactive community around your narrative.</p>
+                        </div>
+                        <div class="radio-indicator relative w-5 h-5 rounded-full border border-outline mt-2 transition-colors duration-200 shrink-0 peer-checked:border-primary"></div>
+                    </div>
+                </label>
+
+                <!-- Option 2: Followers -->
+                <label class="goal-option relative cursor-pointer group reveal-item">
+                    <input class="peer sr-only" name="goal" type="radio" value="followers" />
+                    <div class="w-full p-6 md:p-8 rounded-lg border border-surface-variant bg-surface-container-low transition-all duration-300 hover:bg-surface-container hover:border-outline-variant peer-checked:border-primary peer-checked:bg-surface-container-high flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-full bg-surface text-primary flex items-center justify-center shrink-0 border border-surface-variant shadow-sm">
+                            <span class="material-symbols-outlined text-[24px]">group_add</span>
+                        </div>
+                        <div class="flex-grow pt-1">
+                            <h2 class="font-headline text-headline-md text-primary mb-1"><i class="italic">Audience Expansion</i></h2>
+                            <p class="font-body text-body-md text-on-surface-variant">Optimize content for virality and reach, prioritizing top-of-funnel discovery to rapidly scale your subscriber base.</p>
+                        </div>
+                        <div class="radio-indicator relative w-5 h-5 rounded-full border border-outline mt-2 transition-colors duration-200 shrink-0"></div>
+                    </div>
+                </label>
+
+                <!-- Option 3: Sales -->
+                <label class="goal-option relative cursor-pointer group reveal-item">
+                    <input class="peer sr-only" name="goal" type="radio" value="sales" />
+                    <div class="w-full p-6 md:p-8 rounded-lg border border-surface-variant bg-surface-container-low transition-all duration-300 hover:bg-surface-container hover:border-outline-variant peer-checked:border-primary peer-checked:bg-surface-container-high flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-full bg-surface text-primary flex items-center justify-center shrink-0 border border-surface-variant shadow-sm">
+                            <span class="material-symbols-outlined text-[24px]">local_mall</span>
+                        </div>
+                        <div class="flex-grow pt-1">
+                            <h2 class="font-headline text-headline-md text-primary mb-1"><i class="italic">Commercial Conversion</i></h2>
+                            <p class="font-body text-body-md text-on-surface-variant">Drive intent and guide users seamlessly from awareness to purchase, maximizing ROI and transaction volume.</p>
+                        </div>
+                        <div class="radio-indicator relative w-5 h-5 rounded-full border border-outline mt-2 transition-colors duration-200 shrink-0"></div>
+                    </div>
+                </label>
+
+                <!-- Option 4: Custom -->
+                <label class="goal-option relative cursor-pointer group reveal-item">
+                    <input class="peer sr-only" name="goal" type="radio" value="custom" />
+                    <div class="w-full p-6 md:p-8 rounded-lg border border-surface-variant bg-surface-container-low transition-all duration-300 hover:bg-surface-container hover:border-outline-variant peer-checked:border-primary peer-checked:bg-surface-container-high flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-full bg-surface text-primary flex items-center justify-center shrink-0 border border-surface-variant shadow-sm">
+                            <span class="material-symbols-outlined text-[24px]">edit_note</span>
+                        </div>
+                        <div class="flex-grow pt-1">
+                            <h2 class="font-headline text-headline-md text-primary mb-1"><i class="italic">Custom Objective</i></h2>
+                            <p class="font-body text-body-md text-on-surface-variant mb-4">Define a bespoke outcome tailored to your unique brand requirements.</p>
+                            <textarea id="custom-objective-textarea" class="w-full bg-surface border border-outline-variant rounded-lg p-4 font-body text-body-md focus:border-primary focus:ring-0 transition-colors duration-200 placeholder:text-on-tertiary-container opacity-50 pointer-events-none" onclick="event.stopPropagation();" placeholder="Describe your objective here..." rows="3"></textarea>
+                        </div>
+                        <div class="radio-indicator relative w-5 h-5 rounded-full border border-outline mt-2 transition-colors duration-200 shrink-0"></div>
+                    </div>
+                </label>
+            </form>
+
+            <!-- Actions -->
+            <div class="mt-12 flex items-center justify-between pt-8 border-t border-surface-variant">
+                <button data-navigate="onboarding-1" class="font-label text-label-caps text-secondary hover:text-primary transition-colors duration-200 px-4 py-2 flex items-center gap-2" type="button">
+                    <span class="material-symbols-outlined text-[16px]">arrow_back</span> Back
+                </button>
+                <button data-navigate="onboarding-3" class="bg-primary text-on-primary font-label text-label-caps px-8 py-4 rounded-full hover:opacity-90 transition-opacity duration-200 shadow-sm flex items-center gap-2" type="button">
+                    Continue
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </button>
+            </div>
+        </div>
+    </main>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PAGE 4: ONBOARDING STEP 3 — Brand Soul                      -->
+<!-- ============================================================ -->
+<section id="page-onboarding-3" class="page-section">
+    <main class="w-full max-w-[800px] mx-auto px-6 md:px-10 py-24 md:py-32 flex flex-col gap-24">
+
+        <!-- Progress Bar -->
+        <div class="w-full flex items-center gap-2">
+            <div class="progress-step h-[3px] flex-1 bg-primary rounded-full"></div>
+            <div class="progress-step h-[3px] flex-1 bg-primary rounded-full"></div>
+            <div class="progress-step h-[3px] flex-1 bg-primary rounded-full"></div>
+            <div class="progress-step h-[3px] flex-1 bg-surface-variant rounded-full"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="flex flex-col gap-6 text-center items-center reveal-item">
+            <span class="font-label text-label-caps text-secondary uppercase tracking-widest">Step 3 of 4</span>
+            <h1 class="font-display text-display-lg text-primary">Defining the Brand Soul</h1>
+            <p class="font-body text-body-lg text-secondary max-w-2xl">
+                Before we can strategize, we must establish boundaries. Tell us who you are, and more importantly, <span class="font-headline text-headline-md italic text-on-surface">who you refuse to be.</span>
+            </p>
+            <div class="h-px w-24 bg-outline-variant mt-4"></div>
+        </header>
+
+        <!-- Form -->
+        <form class="flex flex-col gap-20">
+
+            <!-- 1. Brand Philosophy Sliders -->
+            <section class="flex flex-col gap-8 reveal-item">
+                <div class="flex flex-col gap-2">
+                    <h2 class="font-headline text-headline-md text-primary">Brand Philosophy</h2>
+                    <p class="font-body text-body-sm text-secondary">Position your brand's underlying tension.</p>
+                </div>
+                <div class="flex flex-col gap-12 bg-surface-container-lowest p-8 rounded-lg shadow-sm border border-surface-variant">
+                    <!-- Slider 1 -->
+                    <div class="flex flex-col gap-6">
+                        <div class="flex justify-between items-center px-1">
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase">Heritage</span>
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase">Futurism</span>
+                        </div>
+                        <input id="slider-heritage" class="w-full" max="100" min="1" type="range" value="30" />
+                    </div>
+                    <!-- Slider 2 -->
+                    <div class="flex flex-col gap-6">
+                        <div class="flex justify-between items-center px-1">
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase">Restraint</span>
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase">Boldness</span>
+                        </div>
+                        <input id="slider-boldness" class="w-full" max="100" min="1" type="range" value="75" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. The Anti-Persona -->
+            <section class="flex flex-col gap-6 reveal-item">
+                <div class="flex flex-col gap-2">
+                    <h2 class="font-headline text-headline-md text-primary">The Anti-Persona</h2>
+                    <p class="font-body text-body-sm text-secondary">Exclusivity is defined by who you exclude. Describe the audience this brand is explicitly <span class="font-headline text-body-md italic text-on-surface">not</span> built for.</p>
+                </div>
+                <textarea id="anti-persona" class="premium-input font-body text-body-md text-on-surface w-full resize-none p-4 bg-surface-container-lowest rounded-t" placeholder="e.g., We are not for the trend-chasers seeking immediate gratification..." rows="4"></textarea>
+            </section>
+
+            <!-- 3. Voice Taboos -->
+            <section class="flex flex-col gap-6 reveal-item">
+                <div class="flex flex-col gap-2">
+                    <h2 class="font-headline text-headline-md text-primary">Voice Taboos</h2>
+                    <p class="font-body text-body-sm text-secondary">Specify forbidden language. Words that instantly compromise your brand's integrity.</p>
+                </div>
+                <div class="flex flex-col gap-4 p-6 bg-surface-container-lowest rounded-lg border border-surface-variant">
+                    <div class="flex items-center gap-2 border-b border-outline-variant pb-2 focus-within:border-primary transition-colors">
+                        <span class="material-symbols-outlined text-outline">block</span>
+                        <input id="taboo-input" class="bg-transparent border-none focus:ring-0 w-full font-body text-body-md text-on-surface p-0 placeholder:text-outline-variant" placeholder="Add a forbidden word and press Enter..." type="text" />
+                    </div>
+                    <div id="taboo-chips" class="flex flex-wrap gap-3 mt-2">
+                        <!-- Default chips rendered by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Visual Vernacular -->
+            <section class="flex flex-col gap-8 reveal-item">
+                <div class="flex flex-col gap-2">
+                    <h2 class="font-headline text-headline-md text-primary">Visual Vernacular</h2>
+                    <p class="font-body text-body-sm text-secondary">Select the primary material texture that grounds your brand's sensory experience.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Texture 1: Linen -->
+                    <label class="group cursor-pointer relative flex flex-col gap-3">
+                        <input checked class="peer sr-only" name="texture" type="radio" value="linen" />
+                        <div class="aspect-square w-full rounded overflow-hidden border-2 border-transparent peer-checked:border-primary transition-all duration-300">
+                            <img alt="Raw Linen Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnDwKiOJw6IbX59tjMCeQu0nEjQF0YZTTJnjUhna3Te3NNEibSm9oJSmUd9lB_e3kMd5k4RSRB1N-dH4qxKg3oewOjnWXeiNJOPgZHfp1cxIBg30EcQAPtTXK9t7ZE4-j0GzA1gikmzM_VmtHK8WDkAuyqROP5yukbeNr4PyoJD20uypku0iSuYoQ8jOhFt7XW_QOTt5zQ_0RD7ulvMXngxDu9RqRwwlodNm5dk2xTtpFfYVvQcMvTWfUR7pWFylRliyzHow72gXBg" />
+                        </div>
+                        <div class="flex items-center justify-between px-1">
+                            <span class="font-label text-label-caps text-on-surface uppercase tracking-widest">Raw Linen</span>
+                            <div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center peer-checked:border-primary transition-colors">
+                                <div class="w-2.5 h-2.5 rounded-full bg-primary opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+                            </div>
+                        </div>
+                    </label>
+                    <!-- Texture 2: Marble -->
+                    <label class="group cursor-pointer relative flex flex-col gap-3">
+                        <input class="peer sr-only" name="texture" type="radio" value="marble" />
+                        <div class="aspect-square w-full rounded overflow-hidden border-2 border-transparent peer-checked:border-primary transition-all duration-300">
+                            <img alt="Polished Marble Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCydNwI1pDzLr4JMZ1Vt52bdgDoSFHW-5UU6WAiSn97r3ywhB54N9UK1YDrw-o97RD8eG7bv-MUjBkPp9QZiD0btI63cJJZW2VpbYFSM05sTWby76wGO2hYURTARa6h-i5G_31NauFEnDq0nuFWslhcc9tQbWTWHYBqsq_Ool8oYFig4QOJRym7rrzx0ejlQfUGHIyL2203sz1bjRzEComyDgt1Ht5tySVK2bMNH4eJ-pU-U0_TlepcpeEwTWMt9Ngah9O4j3Tu41Vt" />
+                        </div>
+                        <div class="flex items-center justify-between px-1">
+                            <span class="font-label text-label-caps text-on-surface uppercase tracking-widest">Polished Marble</span>
+                            <div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center transition-colors">
+                                <div class="w-2.5 h-2.5 rounded-full bg-primary opacity-0 transition-opacity"></div>
+                            </div>
+                        </div>
+                    </label>
+                    <!-- Texture 3: Paper -->
+                    <label class="group cursor-pointer relative flex flex-col gap-3">
+                        <input class="peer sr-only" name="texture" type="radio" value="paper" />
+                        <div class="aspect-square w-full rounded overflow-hidden border-2 border-transparent peer-checked:border-primary transition-all duration-300">
+                            <img alt="Recycled Paper Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQGOq43XQUX3ZOs9UaE6vJ2FuGnXmL_hcZ1m_oKJC-xJzeduwyg6YrB8v7cYnSIXKsPdw44n6Xwt1BopiqjUWOIEhLHNLuR_JP9gwKpPdvwBZzXGb7aLRt42NJ5brykA_XVS9wy7H1ifSTUYkRXC8cX5OkM_30P7GyG3AGgvF3qN0xwy3T3u56K2MiAadtrigTLDufI_o2hxZvVCpYU0XJ_2Rb_fhQXc-I8vMgPlczWMpDJaPyzRnGYO8zrkip5-gClBskJa7vpLax" />
+                        </div>
+                        <div class="flex items-center justify-between px-1">
+                            <span class="font-label text-label-caps text-on-surface uppercase tracking-widest">Recycled Paper</span>
+                            <div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center transition-colors">
+                                <div class="w-2.5 h-2.5 rounded-full bg-primary opacity-0 transition-opacity"></div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Footer Actions -->
+            <div class="flex justify-between items-center pt-12 border-t border-surface-variant reveal-item">
+                <button data-navigate="onboarding-2" class="font-label text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest flex items-center gap-2" type="button">
+                    <span class="material-symbols-outlined text-[16px]">arrow_back</span> Back
+                </button>
+                <button data-navigate="onboarding-4" class="bg-primary text-on-primary font-label text-label-caps uppercase tracking-widest px-8 py-4 rounded hover:bg-inverse-surface transition-colors duration-300 shadow-sm flex items-center gap-2 group" type="button">
+                    Establish Identity
+                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                </button>
+            </div>
+        </form>
+    </main>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PAGE 5: ONBOARDING STEP 4 — Review & Launch                 -->
+<!-- ============================================================ -->
+<section id="page-onboarding-4" class="page-section">
+    <main class="min-h-screen flex flex-col items-center justify-center p-5 md:p-10 w-full mx-auto max-w-[1200px]">
+        <div class="w-full max-w-[800px] flex flex-col gap-12">
+
+            <!-- Progress Bar -->
+            <div class="w-full flex items-center gap-2">
+                <div class="progress-step h-[3px] flex-1 bg-primary rounded-full"></div>
+                <div class="progress-step h-[3px] flex-1 bg-primary rounded-full"></div>
+                <div class="progress-step h-[3px] flex-1 bg-primary rounded-full"></div>
+                <div class="progress-step h-[3px] flex-1 bg-primary rounded-full"></div>
+            </div>
+
+            <!-- Header -->
+            <header class="text-center flex flex-col gap-4 items-center reveal-item">
+                <span class="font-label text-label-caps text-secondary uppercase tracking-widest">Step 4 of 4</span>
+                <h1 class="font-display text-display-lg text-primary">Your Brand <span class="italic">Blueprint</span></h1>
+                <p class="font-body text-body-lg text-secondary max-w-xl">
+                    Review your strategic foundation before we begin crafting your personalized brand strategy.
+                </p>
+                <div class="h-px w-24 bg-outline-variant mt-4"></div>
+            </header>
+
+            <!-- Review Cards -->
+            <div class="flex flex-col gap-8">
+
+                <!-- Brand Discovery Summary -->
+                <div class="bg-surface-container-lowest rounded-lg border border-surface-variant p-8 flex flex-col gap-6 reveal-item">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-headline text-headline-md text-primary flex items-center gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-primary">explore</span>
+                            Brand Discovery
+                        </h3>
+                        <button data-navigate="onboarding-1" class="font-label text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest" type="button">Edit</button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-body text-body-md">
+                        <div>
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest block mb-1">Social Profiles</span>
+                            <p id="review-social" class="text-on-surface">—</p>
+                        </div>
+                        <div>
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest block mb-1">Location</span>
+                            <p id="review-location" class="text-on-surface">—</p>
+                        </div>
+                        <div>
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest block mb-1">Brand Maturity</span>
+                            <p id="review-maturity" class="text-on-surface capitalize">—</p>
+                        </div>
+                        <div>
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest block mb-1">Aesthetic Direction</span>
+                            <p id="review-aesthetics" class="text-on-surface">—</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objective Summary -->
+                <div class="bg-surface-container-lowest rounded-lg border border-surface-variant p-8 flex flex-col gap-6 reveal-item">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-headline text-headline-md text-primary flex items-center gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-primary">flag</span>
+                            Strategic Objective
+                        </h3>
+                        <button data-navigate="onboarding-2" class="font-label text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest" type="button">Edit</button>
+                    </div>
+                    <div class="font-body text-body-md">
+                        <p id="review-goal" class="text-on-surface">—</p>
+                    </div>
+                </div>
+
+                <!-- Pipeline Configuration -->
+                <div class="bg-surface-container-lowest rounded-lg border border-surface-variant p-8 flex flex-col gap-6 reveal-item">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-headline text-headline-md text-primary flex items-center gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-primary">settings</span>
+                            Pipeline Settings
+                        </h3>
+                        <button data-navigate="onboarding-1" class="font-label text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest" type="button">Edit</button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-body text-body-md">
+                        <div>
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest block mb-1">Content Niche</span>
+                            <p id="review-niche" class="text-on-surface">—</p>
+                        </div>
+                        <div>
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest block mb-1">Target Country</span>
+                            <p id="review-country" class="text-on-surface">—</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest block mb-1">Hashtags</span>
+                            <p id="review-hashtags" class="text-on-surface">—</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-surface-variant">
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest" for="pipeline-weeks">Content Plan</label>
+                            <select id="pipeline-weeks" class="bg-surface border border-outline-variant rounded-lg p-3 font-body text-body-md focus:border-primary focus:ring-0">
+                                <option value="1">1 Week</option>
+                                <option value="2" selected>2 Weeks</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest" for="pipeline-top-n">Posts to Analyze</label>
+                            <select id="pipeline-top-n" class="bg-surface border border-outline-variant rounded-lg p-3 font-body text-body-md focus:border-primary focus:ring-0">
+                                <option value="3">Top 3</option>
+                                <option value="5" selected>Top 5</option>
+                                <option value="10">Top 10</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest" for="pipeline-scrape-count">Scrape Volume</label>
+                            <select id="pipeline-scrape-count" class="bg-surface border border-outline-variant rounded-lg p-3 font-body text-body-md focus:border-primary focus:ring-0">
+                                <option value="30">30 posts</option>
+                                <option value="50" selected>50 posts</option>
+                                <option value="100">100 posts</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brand Soul Summary -->
+                <div class="bg-surface-container-lowest rounded-lg border border-surface-variant p-8 flex flex-col gap-6 reveal-item">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-headline text-headline-md text-primary flex items-center gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-primary">favorite</span>
+                            Brand Soul
+                        </h3>
+                        <button data-navigate="onboarding-3" class="font-label text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest" type="button">Edit</button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-body text-body-md">
+                        <div>
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest block mb-1">Philosophy</span>
+                            <p id="review-philosophy" class="text-on-surface">—</p>
+                        </div>
+                        <div>
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest block mb-1">Visual Texture</span>
+                            <p id="review-texture" class="text-on-surface capitalize">—</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest block mb-1">Anti-Persona</span>
+                            <p id="review-anti-persona" class="text-on-surface italic">—</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <span class="font-label text-label-caps text-on-surface-variant uppercase tracking-widest block mb-1">Voice Taboos</span>
+                            <div id="review-taboos" class="flex flex-wrap gap-2 mt-1">—</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Launch Actions -->
+            <div class="flex justify-between items-center pt-8 border-t border-surface-variant">
+                <button data-navigate="onboarding-3" class="font-label text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest flex items-center gap-2" type="button">
+                    <span class="material-symbols-outlined text-[16px]">arrow_back</span> Back
+                </button>
+                <button id="btn-launch" class="group bg-primary text-on-primary px-10 py-4 rounded-lg font-label text-label-caps uppercase tracking-widest hover:bg-inverse-surface transition-all duration-300 shadow-lg shadow-primary/10 flex items-center gap-3" type="button">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    Launch Strategy
+                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+            </div>
+        </div>
+    </main>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PAGE 6: DASHBOARD — Content Studio                           -->
+<!-- ============================================================ -->
+<section id="page-dashboard" class="page-section">
+    <div class="dashboard-layout min-h-screen">
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar bg-surface border-r border-surface-variant flex flex-col">
+            <!-- Brand -->
+            <div class="p-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-primary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                </div>
+                <div>
+                    <div class="font-headline text-body-md text-primary font-semibold">Quiet Luxury AI</div>
+                    <div class="font-label text-label-caps text-secondary uppercase tracking-widest">Premium Strategist</div>
+                </div>
+            </div>
+
+            <!-- Close Button (Mobile) -->
+            <button id="sidebar-close" class="md:hidden absolute top-4 right-4 text-secondary hover:text-primary p-2">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="flex-grow px-3 py-4 flex flex-col gap-1">
+                <button class="sidebar-nav-item active w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left font-body text-body-md transition-all duration-200" data-section="content-studio">
+                    <span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+                    Content Studio
+                </button>
+                <button class="sidebar-nav-item w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left font-body text-body-md text-secondary hover:bg-surface-container-low hover:text-primary transition-all duration-200" data-section="artifacts">
+                    <span class="material-symbols-outlined text-[20px]">description</span>
+                    Artifacts
+                </button>
+                <button class="sidebar-nav-item w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left font-body text-body-md text-secondary hover:bg-surface-container-low hover:text-primary transition-all duration-200" data-section="strategy-board">
+                    <span class="material-symbols-outlined text-[20px]">architecture</span>
+                    Strategy Board
+                </button>
+                <button class="sidebar-nav-item w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left font-body text-body-md text-secondary hover:bg-surface-container-low hover:text-primary transition-all duration-200" data-section="brand-library">
+                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    Brand Library
+                </button>
+            </nav>
+
+            <!-- Bottom Actions -->
+            <div class="px-3 pb-6 flex flex-col gap-2 mt-auto">
+                <button id="btn-upgrade" class="w-full bg-primary text-on-primary font-label text-label-caps uppercase tracking-widest px-4 py-3 rounded-lg hover:bg-inverse-surface transition-colors">
+                    Upgrade to Pro
+                </button>
+                <button class="w-full flex items-center gap-3 px-4 py-3 text-secondary hover:text-primary font-body text-body-sm transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">help</span> Help
+                </button>
+                <button id="btn-sign-out" class="w-full flex items-center gap-3 px-4 py-3 text-secondary hover:text-primary font-body text-body-sm transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">logout</span> Sign Out
+                </button>
+            </div>
+        </aside>
+
+        <!-- Sidebar Overlay (Mobile) -->
+        <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+        <!-- Main Content Area (Chat / Strategy / Brand Library) -->
+        <main class="chat-main flex flex-col relative bg-background">
+            <!-- Mobile Header -->
+            <div class="md:hidden flex items-center gap-3 p-4 border-b border-surface-variant bg-surface/80 backdrop-blur-md sticky top-0 z-10">
+                <button id="sidebar-toggle" class="p-2 text-primary hover:bg-surface-container rounded-lg transition-colors">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <span class="font-headline text-body-md text-primary font-semibold">Content Studio</span>
+            </div>
+
+            <!-- Content Studio View -->
+            <div id="view-content-studio" class="dashboard-view flex flex-col flex-grow">
+                <div id="chat-messages" class="flex-grow overflow-y-auto px-4 md:px-8 py-8 flex flex-col gap-6">
+                    <!-- Populated by JS after pipeline completes -->
+                </div>
+
+                <!-- Chat Input Bar -->
+                <div class="chat-input-bar border-t border-surface-variant bg-surface px-4 md:px-8 py-4">
+                <div class="flex items-center gap-3 max-w-3xl mx-auto bg-surface-container-low rounded-2xl border border-outline-variant/50 px-4 py-3 focus-within:border-primary transition-colors">
+                    <button id="btn-attachment" class="text-outline hover:text-primary transition-colors p-1">
+                        <span class="material-symbols-outlined text-[20px]">attach_file</span>
+                    </button>
+                    <button class="text-outline hover:text-primary transition-colors p-1">
+                        <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    </button>
+                    <input id="chat-input" class="flex-grow bg-transparent border-none focus:ring-0 font-body text-body-md text-on-surface p-0 placeholder:text-outline" placeholder="Direct the strategy... (e.g., 'Draft a press release based on these pillars')" type="text" />
+                    <button id="btn-send-chat" class="bg-primary text-on-primary w-9 h-9 rounded-full flex items-center justify-center hover:bg-inverse-surface transition-colors shadow-sm">
+                        <span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+                    </button>
+                </div>
+                <p class="text-center font-label text-label-caps text-secondary uppercase tracking-widest mt-3 opacity-60">
+                    Quiet Luxury AI can make mistakes. Verify strategic recommendations.
+                </p>
+                </div>
+            </div>
+
+            <!-- Strategy Board View -->
+            <div id="view-strategy-board" class="dashboard-view hidden flex-grow overflow-y-auto px-4 md:px-8 py-8">
+                <div id="strategy-board-content" class="max-w-4xl mx-auto flex flex-col gap-8">
+                    <div class="text-center py-16">
+                        <span class="material-symbols-outlined text-outline text-[48px] mb-4">architecture</span>
+                        <p class="font-body text-body-lg text-secondary">Launch your strategy to see the full content plan here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Library View -->
+            <div id="view-brand-library" class="dashboard-view hidden flex-grow overflow-y-auto px-4 md:px-8 py-8">
+                <div id="brand-library-content" class="max-w-3xl mx-auto flex flex-col gap-6">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Artifacts Detail View -->
+            <div id="view-artifacts" class="dashboard-view hidden flex-grow overflow-y-auto px-4 md:px-8 py-8">
+                <div id="artifacts-detail-content" class="max-w-3xl mx-auto flex flex-col gap-6">
+                    <!-- Populated by JS when artifact clicked -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Artifacts Panel -->
+        <aside id="artifacts-panel" class="artifacts-panel bg-surface border-l border-surface-variant overflow-y-auto hidden md:flex flex-col">
+            <div class="p-6 flex items-center justify-between border-b border-surface-variant">
+                <div>
+                    <h3 class="font-headline text-headline-md text-primary">Recent Artifacts</h3>
+                    <p class="font-body text-body-sm text-secondary">Outputs from this session</p>
+                </div>
+                <button class="text-outline hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                </button>
+            </div>
+            <div id="artifacts-list" class="flex-grow p-4 flex flex-col gap-2">
+                <!-- Rendered by JS -->
+            </div>
+            <div class="p-4 border-t border-surface-variant">
+                <button id="btn-view-artifacts" class="w-full flex items-center justify-center gap-2 px-4 py-3 border border-surface-variant rounded-lg font-label text-label-caps text-secondary uppercase tracking-widest hover:bg-surface-container-low hover:text-primary transition-all">
+                    <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                    View All Artifacts
+                </button>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<!-- Pipeline Loading Overlay -->
+<div id="pipeline-overlay" class="pipeline-overlay hidden">
+    <div class="pipeline-modal">
+        <div class="pipeline-modal-header">
+            <span class="material-symbols-outlined text-primary text-[32px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+            <h2 class="font-display text-headline-lg text-primary">Building Your Strategy</h2>
+            <p class="font-body text-body-md text-secondary">Scraping Instagram, analyzing top posts, and crafting your content plan…</p>
+        </div>
+        <div id="pipeline-stages" class="pipeline-stages">
+            <!-- Populated by JS -->
+        </div>
+        <p id="pipeline-status" class="font-body text-body-sm text-secondary text-center mt-6">Connecting to backend…</p>
+        <p id="pipeline-elapsed" class="font-label text-label-caps text-secondary uppercase tracking-widest text-center mt-2 opacity-60"></p>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

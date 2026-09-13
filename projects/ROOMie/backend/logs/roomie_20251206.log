@@ -1,0 +1,563 @@
+2025-12-06 10:52:51 | INFO     | emotion_detector | Background emotion monitoring started
+2025-12-06 10:52:51 | INFO     | app | Background emotion monitor started
+2025-12-06 10:52:51 | INFO     | conversation_memory | Database initialized successfully
+2025-12-06 10:52:51 | INFO     | app | Database and audio directory initialized
+2025-12-06 10:52:51 | INFO     | app | ROOMie Backend v3.0 starting...
+2025-12-06 10:52:51 | INFO     | app | Server: http://127.0.0.1:5000
+2025-12-06 10:52:51 | INFO     | app | WebSocket: ws://127.0.0.1:5000
+2025-12-06 10:52:59 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.99)
+2025-12-06 10:53:01 | INFO     | emotion_detector | Background emotion monitoring started
+2025-12-06 10:53:01 | INFO     | app | Background emotion monitor started
+2025-12-06 10:53:01 | INFO     | conversation_memory | Database initialized successfully
+2025-12-06 10:53:01 | INFO     | app | Database and audio directory initialized
+2025-12-06 10:53:01 | INFO     | app | ROOMie Backend v3.0 starting...
+2025-12-06 10:53:01 | INFO     | app | Server: http://127.0.0.1:5000
+2025-12-06 10:53:01 | INFO     | app | WebSocket: ws://127.0.0.1:5000
+2025-12-06 10:53:05 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:53:06 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.52)
+2025-12-06 10:53:15 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.82)
+2025-12-06 10:53:15 | INFO     | emotion_detector | Background emotion monitoring started
+2025-12-06 10:53:19 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.42)
+2025-12-06 10:53:26 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.57)
+2025-12-06 10:53:27 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.73)
+2025-12-06 10:53:30 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.65)
+2025-12-06 10:53:35 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 10:53:38 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.93)
+2025-12-06 10:53:41 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.67)
+2025-12-06 10:53:44 | INFO     | conversation_memory | Created new user: Naiteek
+2025-12-06 10:53:44 | INFO     | emotion_detector | Emotion monitor updated for user: 4
+2025-12-06 10:53:44 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'cheerful' (speed: 1.0)
+2025-12-06 10:53:44 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.36)
+2025-12-06 10:53:47 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.59)
+2025-12-06 10:53:49 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:53:52 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:53:58 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:54:00 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:54:02 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:54:03 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmpf0_vnv9r.mp3
+2025-12-06 10:54:03 | INFO     | app | ROOMie backend ready
+2025-12-06 10:54:09 | INFO     | emotion_detector | Bias correction: Switched from fear/sad to neutral (neutral score: 0.25)
+2025-12-06 10:54:09 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.25)
+2025-12-06 10:54:12 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.98)
+2025-12-06 10:54:13 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.56)
+2025-12-06 10:54:20 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.77)
+2025-12-06 10:54:22 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:54:23 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.72)
+2025-12-06 10:54:24 | INFO     | emotion_detector | Background emotion monitoring stopped
+2025-12-06 10:54:25 | INFO     | emotion_detector | Background emotion monitoring started
+2025-12-06 10:54:31 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.85)
+2025-12-06 10:54:32 | INFO     | emotion_detector | Emotion monitor updated for user: 1
+2025-12-06 10:54:32 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'cheerful' (speed: 1.0)
+2025-12-06 10:54:33 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.53)
+2025-12-06 10:54:34 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.94)
+2025-12-06 10:54:39 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmp9zyfcd7p.mp3
+2025-12-06 10:54:41 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:54:43 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:54:45 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.60)
+2025-12-06 10:54:54 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 10:54:57 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.76)
+2025-12-06 10:55:05 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.47)
+2025-12-06 10:55:08 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 10:55:08 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.49)
+2025-12-06 10:55:08 | INFO     | emotion_calibration | Matched emotion: neutral (similarity: 0.90)
+2025-12-06 10:55:08 | INFO     | emotion_detector | Personalized match: neutral (confidence: 0.90)
+2025-12-06 10:55:11 | INFO     | ai_core | AI response generated: Hey! I’m doing well, thank you for asking. How abo...
+2025-12-06 10:55:11 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'sad' (speed: 0.85)
+2025-12-06 10:55:14 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmp40b_jnv9.mp3
+2025-12-06 10:55:16 | INFO     | emotion_detector | Detected emotion: surprise (confidence: 0.46)
+2025-12-06 10:55:20 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.53)
+2025-12-06 10:55:20 | INFO     | emotion_calibration | Matched emotion: angry (similarity: 0.87)
+2025-12-06 10:55:20 | INFO     | emotion_detector | Personalized match: angry (confidence: 0.87)
+2025-12-06 10:55:28 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.90)
+2025-12-06 10:55:32 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:55:33 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.94)
+2025-12-06 10:55:39 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.98)
+2025-12-06 10:55:44 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 10:55:45 | INFO     | emotion_calibration | Matched emotion: neutral (similarity: 0.89)
+2025-12-06 10:55:45 | INFO     | emotion_detector | Personalized match: neutral (confidence: 0.89)
+2025-12-06 10:55:45 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.97)
+2025-12-06 10:55:47 | INFO     | ai_core | AI response generated: Hello there! How are you today? Anything you'd lik...
+2025-12-06 10:55:47 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'sad' (speed: 0.85)
+2025-12-06 10:55:50 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmp5v5lspa_.mp3
+2025-12-06 10:55:51 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.61)
+2025-12-06 10:55:58 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.94)
+2025-12-06 10:55:59 | INFO     | emotion_calibration | Matched emotion: surprised (similarity: 0.79)
+2025-12-06 10:55:59 | INFO     | emotion_detector | Personalized match: surprised (confidence: 0.79)
+2025-12-06 10:56:03 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.89)
+2025-12-06 10:56:10 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.87)
+2025-12-06 10:56:12 | INFO     | emotion_calibration | Matched emotion: surprised (similarity: 0.74)
+2025-12-06 10:56:12 | INFO     | emotion_detector | Personalized match: surprised (confidence: 0.74)
+2025-12-06 10:56:15 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.96)
+2025-12-06 10:56:17 | INFO     | voice_tone | Voice tone analysis: happy (confidence: 0.67)
+2025-12-06 10:56:22 | INFO     | ai_core | AI response generated: It's completely normal to feel uncertain about an ...
+2025-12-06 10:56:23 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'neutral' (speed: 1.0)
+2025-12-06 10:56:23 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.87)
+2025-12-06 10:56:25 | INFO     | emotion_calibration | Matched emotion: sad (similarity: 0.89)
+2025-12-06 10:56:25 | INFO     | emotion_detector | Personalized match: sad (confidence: 0.89)
+2025-12-06 10:56:26 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.63)
+2025-12-06 10:56:33 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 10:56:34 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmp2eox0w15.mp3
+2025-12-06 10:56:36 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.98)
+2025-12-06 10:56:38 | INFO     | emotion_detector | Bias correction: Switched from fear/sad to neutral (neutral score: 0.46)
+2025-12-06 10:56:38 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.46)
+2025-12-06 10:56:45 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.80)
+2025-12-06 10:56:48 | INFO     | emotion_calibration | Matched emotion: neutral (similarity: 0.85)
+2025-12-06 10:56:48 | INFO     | emotion_detector | Personalized match: neutral (confidence: 0.85)
+2025-12-06 10:56:50 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.58)
+2025-12-06 10:56:55 | INFO     | voice_commands | Detected command: open_game_center with params: {}
+2025-12-06 10:56:56 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.91)
+2025-12-06 10:57:02 | INFO     | emotion_calibration | Matched emotion: neutral (similarity: 0.79)
+2025-12-06 10:57:02 | INFO     | emotion_detector | Personalized match: neutral (confidence: 0.79)
+2025-12-06 10:57:02 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 10:57:09 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 10:57:10 | INFO     | voice_commands | Detected command: start_game_rapid_fire with params: {}
+2025-12-06 10:57:15 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 10:57:16 | INFO     | emotion_detector | Detected emotion: happy (confidence: 1.00)
+2025-12-06 10:57:17 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.53)
+2025-12-06 10:57:18 | INFO     | ai_core | AI response generated: I’m glad that resonates with you. If you want to s...
+2025-12-06 10:57:18 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'sad' (speed: 0.85)
+2025-12-06 10:57:22 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmp8m6fbcyw.mp3
+2025-12-06 10:57:23 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 10:57:30 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 1.00)
+2025-12-06 10:57:33 | INFO     | emotion_calibration | Matched emotion: surprised (similarity: 0.86)
+2025-12-06 10:57:33 | INFO     | emotion_detector | Personalized match: surprised (confidence: 0.86)
+2025-12-06 10:57:35 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.98)
+2025-12-06 10:57:42 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.63)
+2025-12-06 10:57:45 | INFO     | emotion_calibration | Matched emotion: sad (similarity: 0.90)
+2025-12-06 10:57:45 | INFO     | emotion_detector | Personalized match: sad (confidence: 0.90)
+2025-12-06 10:57:48 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.98)
+2025-12-06 10:57:53 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.69)
+2025-12-06 10:57:58 | INFO     | emotion_calibration | Matched emotion: neutral (similarity: 0.84)
+2025-12-06 10:57:58 | INFO     | emotion_detector | Personalized match: neutral (confidence: 0.84)
+2025-12-06 10:58:00 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 10:58:00 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.48)
+2025-12-06 10:58:04 | INFO     | emotion_detector | Detected emotion: happy (confidence: 1.00)
+2025-12-06 10:58:07 | INFO     | ai_core | AI response generated: It sounds like you're looking to connect with your...
+2025-12-06 10:58:07 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'neutral' (speed: 1.0)
+2025-12-06 10:58:10 | INFO     | emotion_calibration | Matched emotion: neutral (similarity: 0.80)
+2025-12-06 10:58:10 | INFO     | emotion_detector | Personalized match: neutral (confidence: 0.80)
+2025-12-06 10:58:11 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.96)
+2025-12-06 10:58:14 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:18 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:20 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:24 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmpjlplo1re.mp3
+2025-12-06 10:58:24 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 10:58:24 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:26 | INFO     | ai_core | AI response generated: I’m here for you! If you’d like to elaborate or sh...
+2025-12-06 10:58:27 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:27 | INFO     | emotion_calibration | Saved calibration sample for user 1, emotion: happy
+2025-12-06 10:58:27 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'sad' (speed: 0.85)
+2025-12-06 10:58:30 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:31 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmpiuat7dro.mp3
+2025-12-06 10:58:34 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:36 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:41 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:45 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:45 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:51 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:55 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:55 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:58:57 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 10:59:00 | INFO     | ai_core | AI response generated: Yes, go ahead! I'm listening. What would you like ...
+2025-12-06 10:59:00 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'sad' (speed: 0.85)
+2025-12-06 10:59:01 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:59:04 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:59:04 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmpuwdfhyeq.mp3
+2025-12-06 10:59:05 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:59:06 | INFO     | emotion_calibration | Saved calibration sample for user 1, emotion: happy
+2025-12-06 10:59:11 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:59:12 | INFO     | emotion_calibration | Saved calibration sample for user 1, emotion: happy
+2025-12-06 10:59:13 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:59:16 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:59:17 | INFO     | emotion_calibration | Saved calibration sample for user 1, emotion: neutral
+2025-12-06 10:59:20 | INFO     | emotion_calibration | Saved calibration sample for user 1, emotion: neutral
+2025-12-06 10:59:20 | INFO     | voice_tone | Voice tone analysis: angry (confidence: 0.67)
+2025-12-06 10:59:23 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:59:23 | INFO     | ai_core | AI response generated: It sounds like you're gathering your thoughts. Tak...
+2025-12-06 10:59:23 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'sad' (speed: 0.85)
+2025-12-06 10:59:24 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:59:26 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 10:59:29 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmp6sy78mtq.mp3
+2025-12-06 10:59:30 | INFO     | emotion_calibration | Saved calibration sample for user 1, emotion: neutral
+2025-12-06 10:59:30 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 10:59:35 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.96)
+2025-12-06 10:59:35 | INFO     | ai_core | AI response generated: I’m here for you. If you want to share more about ...
+2025-12-06 10:59:35 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'sad' (speed: 0.85)
+2025-12-06 10:59:36 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.92)
+2025-12-06 10:59:36 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.92)
+2025-12-06 10:59:38 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.54)
+2025-12-06 10:59:39 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmpe9opaobj.mp3
+2025-12-06 10:59:44 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 10:59:46 | INFO     | ai_core | AI response generated: Absolutely! What would you like to share? I'm all ...
+2025-12-06 10:59:46 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'happy' (speed: 1.1)
+2025-12-06 10:59:47 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.92)
+2025-12-06 10:59:49 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.86)
+2025-12-06 10:59:49 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.86)
+2025-12-06 10:59:50 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.60)
+2025-12-06 10:59:50 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmpe_jqvtxu.mp3
+2025-12-06 10:59:58 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.83)
+2025-12-06 11:00:00 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.89)
+2025-12-06 11:00:00 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.89)
+2025-12-06 11:00:01 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.86)
+2025-12-06 11:00:09 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.97)
+2025-12-06 11:00:11 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.88)
+2025-12-06 11:00:11 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.88)
+2025-12-06 11:00:12 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.79)
+2025-12-06 11:00:14 | INFO     | voice_tone | Voice tone analysis: angry (confidence: 0.67)
+2025-12-06 11:00:15 | INFO     | ai_core | AI response generated: No worries! Take your time. When you're ready, I'm...
+2025-12-06 11:00:15 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'happy' (speed: 1.1)
+2025-12-06 11:00:19 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmpdfly7w2e.mp3
+2025-12-06 11:00:21 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.98)
+2025-12-06 11:00:23 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.89)
+2025-12-06 11:00:23 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.89)
+2025-12-06 11:00:24 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:00:33 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.67)
+2025-12-06 11:00:35 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.91)
+2025-12-06 11:00:35 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.91)
+2025-12-06 11:00:36 | INFO     | emotion_detector | Detected emotion: fear (confidence: 1.00)
+2025-12-06 11:00:44 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.76)
+2025-12-06 11:00:46 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.87)
+2025-12-06 11:00:46 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.87)
+2025-12-06 11:00:47 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.93)
+2025-12-06 11:00:53 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 11:00:56 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 1.00)
+2025-12-06 11:00:56 | INFO     | ai_core | AI response generated: Great! What’s on your mind? Feel free to share whe...
+2025-12-06 11:00:57 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'happy' (speed: 1.1)
+2025-12-06 11:00:58 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.90)
+2025-12-06 11:00:58 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.90)
+2025-12-06 11:01:01 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.58)
+2025-12-06 11:01:04 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmpy2h8d8oc.mp3
+2025-12-06 11:01:07 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.53)
+2025-12-06 11:01:08 | INFO     | emotion_calibration | Matched emotion: angry (similarity: 0.87)
+2025-12-06 11:01:08 | INFO     | emotion_detector | Personalized match: angry (confidence: 0.87)
+2025-12-06 11:01:10 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.96)
+2025-12-06 11:01:15 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:01:17 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.92)
+2025-12-06 11:01:17 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.92)
+2025-12-06 11:01:19 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:01:25 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:01:26 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.90)
+2025-12-06 11:01:26 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.90)
+2025-12-06 11:01:28 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 11:01:28 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 1.00)
+2025-12-06 11:01:31 | INFO     | ai_core | AI response generated: It sounds like you're looking for ways to maximize...
+2025-12-06 11:01:31 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'happy' (speed: 1.1)
+2025-12-06 11:01:33 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:01:34 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.91)
+2025-12-06 11:01:34 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.91)
+2025-12-06 11:01:36 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.89)
+2025-12-06 11:01:36 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmpblxwopxz.mp3
+2025-12-06 11:01:41 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:01:43 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.55)
+2025-12-06 11:01:43 | INFO     | emotion_calibration | Matched emotion: neutral (similarity: 0.90)
+2025-12-06 11:01:43 | INFO     | emotion_detector | Personalized match: neutral (confidence: 0.90)
+2025-12-06 11:01:46 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:01:48 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.91)
+2025-12-06 11:01:48 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.91)
+2025-12-06 11:01:49 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.53)
+2025-12-06 11:01:52 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.64)
+2025-12-06 11:01:53 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.93)
+2025-12-06 11:01:53 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.93)
+2025-12-06 11:01:54 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:01:58 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:01:59 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.93)
+2025-12-06 11:01:59 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.93)
+2025-12-06 11:02:01 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:02:04 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:02:04 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.82)
+2025-12-06 11:02:06 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.81)
+2025-12-06 11:02:09 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.88)
+2025-12-06 11:02:09 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.88)
+2025-12-06 11:02:10 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.61)
+2025-12-06 11:02:13 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.89)
+2025-12-06 11:02:16 | INFO     | emotion_calibration | Matched emotion: surprised (similarity: 0.84)
+2025-12-06 11:02:16 | INFO     | emotion_detector | Personalized match: surprised (confidence: 0.84)
+2025-12-06 11:02:17 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.57)
+2025-12-06 11:02:19 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:02:20 | INFO     | voice_tone | Voice tone analysis: angry (confidence: 0.67)
+2025-12-06 11:02:21 | INFO     | emotion_calibration | Matched emotion: surprised (similarity: 0.88)
+2025-12-06 11:02:21 | INFO     | emotion_detector | Personalized match: surprised (confidence: 0.88)
+2025-12-06 11:02:23 | INFO     | ai_core | AI response generated: What else would you like to add? I'm here to help ...
+2025-12-06 11:02:23 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'neutral' (speed: 1.0)
+2025-12-06 11:02:23 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.96)
+2025-12-06 11:02:25 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:02:27 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.87)
+2025-12-06 11:02:27 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.87)
+2025-12-06 11:02:29 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmpf2vj7472.mp3
+2025-12-06 11:02:29 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.88)
+2025-12-06 11:02:31 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:02:32 | INFO     | emotion_calibration | Matched emotion: surprised (similarity: 0.85)
+2025-12-06 11:02:32 | INFO     | emotion_detector | Personalized match: surprised (confidence: 0.85)
+2025-12-06 11:02:35 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:02:37 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:02:37 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.95)
+2025-12-06 11:02:41 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.97)
+2025-12-06 11:02:42 | INFO     | emotion_calibration | Matched emotion: surprised (similarity: 0.87)
+2025-12-06 11:02:42 | INFO     | emotion_detector | Personalized match: surprised (confidence: 0.87)
+2025-12-06 11:02:42 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 11:02:43 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:02:45 | INFO     | ai_core | AI response generated: It seems like there might be a bit of confusion in...
+2025-12-06 11:02:45 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'neutral' (speed: 1.0)
+2025-12-06 11:02:47 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:02:48 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.86)
+2025-12-06 11:02:48 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.86)
+2025-12-06 11:02:49 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmp919doz2h.mp3
+2025-12-06 11:02:49 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:02:53 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:02:53 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:02:55 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.98)
+2025-12-06 11:02:58 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.88)
+2025-12-06 11:02:58 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.88)
+2025-12-06 11:02:59 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:03:01 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:03:04 | INFO     | emotion_calibration | Matched emotion: surprised (similarity: 0.79)
+2025-12-06 11:03:04 | INFO     | emotion_detector | Personalized match: surprised (confidence: 0.79)
+2025-12-06 11:03:05 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.98)
+2025-12-06 11:03:07 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:03:09 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.82)
+2025-12-06 11:03:09 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.82)
+2025-12-06 11:03:11 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:03:14 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:03:15 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.85)
+2025-12-06 11:03:15 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.85)
+2025-12-06 11:03:17 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:03:20 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:03:20 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.85)
+2025-12-06 11:03:20 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.85)
+2025-12-06 11:03:24 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:03:26 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.84)
+2025-12-06 11:03:26 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.84)
+2025-12-06 11:03:27 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:03:30 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:03:31 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.83)
+2025-12-06 11:03:31 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.83)
+2025-12-06 11:03:33 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:03:34 | INFO     | voice_tone | Voice tone analysis: neutral (confidence: 0.50)
+2025-12-06 11:03:36 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:03:37 | INFO     | ai_core | AI response generated: It sounds like you might want to talk about someth...
+2025-12-06 11:03:37 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'happy' (speed: 1.1)
+2025-12-06 11:03:37 | INFO     | emotion_calibration | Matched emotion: surprised (similarity: 0.75)
+2025-12-06 11:03:37 | INFO     | emotion_detector | Personalized match: surprised (confidence: 0.75)
+2025-12-06 11:03:39 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.98)
+2025-12-06 11:03:41 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:03:42 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmpbf3iipo1.mp3
+2025-12-06 11:03:42 | INFO     | emotion_calibration | Matched emotion: happy (similarity: 0.82)
+2025-12-06 11:03:42 | INFO     | emotion_detector | Personalized match: happy (confidence: 0.82)
+2025-12-06 11:03:45 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.98)
+2025-12-06 11:03:48 | INFO     | emotion_calibration | Matched emotion: surprised (similarity: 0.83)
+2025-12-06 11:03:48 | INFO     | emotion_detector | Personalized match: surprised (confidence: 0.83)
+2025-12-06 11:03:48 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:03:51 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:05:07 | INFO     | emotion_detector | Background emotion monitoring started
+2025-12-06 11:05:07 | INFO     | app | Background emotion monitor started
+2025-12-06 11:05:07 | INFO     | conversation_memory | Database initialized successfully
+2025-12-06 11:05:07 | INFO     | app | Database and audio directory initialized
+2025-12-06 11:05:07 | INFO     | app | ROOMie Backend v3.0 starting...
+2025-12-06 11:05:07 | INFO     | app | Server: http://127.0.0.1:5000
+2025-12-06 11:05:07 | INFO     | app | WebSocket: ws://127.0.0.1:5000
+2025-12-06 11:05:15 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:05:23 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:05:23 | INFO     | emotion_detector | Background emotion monitoring started
+2025-12-06 11:05:23 | INFO     | app | Background emotion monitor started
+2025-12-06 11:05:23 | INFO     | conversation_memory | Database initialized successfully
+2025-12-06 11:05:23 | INFO     | app | Database and audio directory initialized
+2025-12-06 11:05:23 | INFO     | app | ROOMie Backend v3.0 starting...
+2025-12-06 11:05:23 | INFO     | app | Server: http://127.0.0.1:5000
+2025-12-06 11:05:23 | INFO     | app | WebSocket: ws://127.0.0.1:5000
+2025-12-06 11:05:24 | INFO     | emotion_detector | Background emotion monitoring started
+2025-12-06 11:05:31 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:05:31 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:05:32 | INFO     | conversation_memory | Created new user: ln
+2025-12-06 11:05:32 | INFO     | emotion_detector | Emotion monitor updated for user: 5
+2025-12-06 11:05:32 | INFO     | tts_output | Generating TTS with voice 'nova' for tone 'cheerful' (speed: 1.0)
+2025-12-06 11:05:32 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:05:35 | INFO     | tts_output | TTS audio saved: C:\Users\SHIVANSH\Desktop\ROOMie\backend\audio\tmp5cv_l329.mp3
+2025-12-06 11:05:35 | INFO     | app | ROOMie backend ready
+2025-12-06 11:05:38 | INFO     | emotion_detector | Background emotion monitoring stopped
+2025-12-06 11:05:38 | INFO     | emotion_detector | Background emotion monitoring started
+2025-12-06 11:05:40 | INFO     | emotion_detector | Background emotion monitoring stopped
+2025-12-06 11:05:42 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:05:43 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:05:44 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:05:45 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:05:52 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.89)
+2025-12-06 11:05:52 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.84)
+2025-12-06 11:05:58 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.84)
+2025-12-06 11:05:58 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.93)
+2025-12-06 11:06:02 | INFO     | emotion_detector | Background emotion monitoring started
+2025-12-06 11:06:02 | INFO     | emotion_detector | Emotion monitor updated for user: 5
+2025-12-06 11:06:04 | INFO     | emotion_detector | Background emotion monitoring stopped
+2025-12-06 11:06:04 | INFO     | emotion_detector | Background emotion monitoring started
+2025-12-06 11:06:06 | INFO     | emotion_detector | Background emotion monitoring stopped
+2025-12-06 11:06:08 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.85)
+2025-12-06 11:06:08 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.97)
+2025-12-06 11:06:09 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.92)
+2025-12-06 11:06:10 | INFO     | emotion_detector | Detected emotion: sad (confidence: 1.00)
+2025-12-06 11:06:16 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.95)
+2025-12-06 11:06:16 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.60)
+2025-12-06 11:06:23 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:06:24 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.50)
+2025-12-06 11:06:31 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.49)
+2025-12-06 11:06:32 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.88)
+2025-12-06 11:06:39 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:06:39 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.97)
+2025-12-06 11:06:47 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.50)
+2025-12-06 11:06:48 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.96)
+2025-12-06 11:06:55 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:06:55 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.96)
+2025-12-06 11:07:01 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.78)
+2025-12-06 11:07:01 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.91)
+2025-12-06 11:07:07 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.72)
+2025-12-06 11:07:07 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.86)
+2025-12-06 11:07:13 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.79)
+2025-12-06 11:07:13 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.71)
+2025-12-06 11:07:19 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.62)
+2025-12-06 11:07:20 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.53)
+2025-12-06 11:07:25 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.86)
+2025-12-06 11:07:26 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.65)
+2025-12-06 11:07:31 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.56)
+2025-12-06 11:07:32 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.53)
+2025-12-06 11:07:37 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.87)
+2025-12-06 11:07:38 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.60)
+2025-12-06 11:07:43 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.71)
+2025-12-06 11:07:44 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.76)
+2025-12-06 11:07:49 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.89)
+2025-12-06 11:07:50 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.90)
+2025-12-06 11:07:56 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:07:57 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.99)
+2025-12-06 11:08:03 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:08:04 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:08:10 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:08:10 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.99)
+2025-12-06 11:08:17 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:08:17 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:08:25 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:08:25 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.65)
+2025-12-06 11:08:33 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:08:33 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:08:40 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:08:40 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:08:47 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:08:47 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:08:54 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.97)
+2025-12-06 11:08:54 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.49)
+2025-12-06 11:09:01 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.52)
+2025-12-06 11:09:01 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.66)
+2025-12-06 11:09:07 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.64)
+2025-12-06 11:09:08 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.65)
+2025-12-06 11:09:14 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.53)
+2025-12-06 11:09:14 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.98)
+2025-12-06 11:09:21 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.77)
+2025-12-06 11:09:21 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.52)
+2025-12-06 11:09:27 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.58)
+2025-12-06 11:09:28 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:09:34 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:09:34 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.71)
+2025-12-06 11:09:40 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.75)
+2025-12-06 11:09:41 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.61)
+2025-12-06 11:09:54 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.60)
+2025-12-06 11:09:54 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.47)
+2025-12-06 11:10:07 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:10:08 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:10:22 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:10:23 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:10:34 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.96)
+2025-12-06 11:10:35 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.99)
+2025-12-06 11:10:46 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:10:47 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)
+2025-12-06 11:10:59 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:11:00 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.56)
+2025-12-06 11:11:12 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:11:12 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.91)
+2025-12-06 11:11:24 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:11:25 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.98)
+2025-12-06 11:11:37 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:11:37 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.99)
+2025-12-06 11:11:49 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:11:49 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.85)
+2025-12-06 11:12:02 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:12:02 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.54)
+2025-12-06 11:12:14 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.26)
+2025-12-06 11:12:15 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.45)
+2025-12-06 11:12:27 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:12:28 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.97)
+2025-12-06 11:12:41 | INFO     | emotion_detector | Bias correction: Switched from fear/sad to neutral (neutral score: 0.46)
+2025-12-06 11:12:41 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.46)
+2025-12-06 11:12:41 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.87)
+2025-12-06 11:12:53 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:12:54 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.80)
+2025-12-06 11:13:05 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:13:06 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.50)
+2025-12-06 11:13:18 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:13:18 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.76)
+2025-12-06 11:13:30 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:13:31 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.38)
+2025-12-06 11:13:42 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.76)
+2025-12-06 11:13:43 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.71)
+2025-12-06 11:13:54 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:13:55 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.48)
+2025-12-06 11:14:07 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:14:07 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.88)
+2025-12-06 11:14:19 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:14:20 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.95)
+2025-12-06 11:14:34 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:14:35 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.96)
+2025-12-06 11:14:50 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.89)
+2025-12-06 11:14:50 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.86)
+2025-12-06 11:15:02 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:15:03 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.95)
+2025-12-06 11:15:16 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.95)
+2025-12-06 11:15:17 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.86)
+2025-12-06 11:15:29 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:15:30 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.77)
+2025-12-06 11:15:42 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.82)
+2025-12-06 11:15:43 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.71)
+2025-12-06 11:15:55 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:15:55 | INFO     | emotion_detector | Detected emotion: neutral (confidence: 0.32)
+2025-12-06 11:16:09 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:16:10 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.92)
+2025-12-06 11:16:23 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:16:24 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.92)
+2025-12-06 11:16:39 | INFO     | emotion_detector | Detected emotion: angry (confidence: 0.51)
+2025-12-06 11:16:40 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.80)
+2025-12-06 11:16:59 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.50)
+2025-12-06 11:17:00 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.63)
+2025-12-06 11:17:14 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.90)
+2025-12-06 11:17:14 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.93)
+2025-12-06 11:17:28 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:17:29 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.45)
+2025-12-06 11:17:43 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.71)
+2025-12-06 11:17:44 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.92)
+2025-12-06 11:17:57 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.87)
+2025-12-06 11:17:58 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.44)
+2025-12-06 11:18:09 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:18:10 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.60)
+2025-12-06 11:18:25 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:18:25 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.89)
+2025-12-06 11:18:38 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.85)
+2025-12-06 11:18:38 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.94)
+2025-12-06 11:18:50 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:18:51 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.80)
+2025-12-06 11:19:03 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.75)
+2025-12-06 11:19:04 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.89)
+2025-12-06 11:19:15 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:19:16 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.76)
+2025-12-06 11:19:28 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:19:29 | INFO     | emotion_detector | Detected emotion: fear (confidence: 1.00)
+2025-12-06 11:19:40 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:19:41 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.64)
+2025-12-06 11:19:53 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.79)
+2025-12-06 11:19:54 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.75)
+2025-12-06 11:20:07 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.96)
+2025-12-06 11:20:07 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.83)
+2025-12-06 11:20:19 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:20:20 | INFO     | emotion_detector | Detected emotion: fear (confidence: 0.51)
+2025-12-06 11:20:32 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.99)
+2025-12-06 11:20:33 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.65)
+2025-12-06 11:20:44 | WARNING  | emotion_detector | Failed to capture frame from camera
+2025-12-06 11:20:45 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.92)
+2025-12-06 11:20:58 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.86)
+2025-12-06 11:20:58 | INFO     | emotion_detector | Detected emotion: sad (confidence: 0.96)
+2025-12-06 11:21:05 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.98)
+2025-12-06 11:21:06 | INFO     | emotion_detector | Detected emotion: happy (confidence: 0.98)
+2025-12-06 11:21:12 | INFO     | emotion_detector | Detected emotion: angry (confidence: 1.00)

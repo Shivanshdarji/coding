@@ -1,0 +1,297 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Strategy Artifact - Studio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=EB+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-secondary-container": "#656461",
+                            "surface-container-low": "#f6f3f1",
+                            "on-secondary-fixed": "#1c1c19",
+                            "surface-container-lowest": "#ffffff",
+                            "error": "#ba1a1a",
+                            "error-container": "#ffdad6",
+                            "secondary-fixed-dim": "#c9c6c2",
+                            "on-error": "#ffffff",
+                            "primary-fixed-dim": "#bccabd",
+                            "on-primary-container": "#95a397",
+                            "primary-container": "#2d3930",
+                            "inverse-surface": "#30302f",
+                            "on-primary": "#ffffff",
+                            "primary": "#18241b",
+                            "on-secondary-fixed-variant": "#474743",
+                            "on-surface-variant": "#434843",
+                            "on-secondary": "#ffffff",
+                            "on-tertiary": "#ffffff",
+                            "outline-variant": "#c3c8c2",
+                            "tertiary-fixed": "#e9e2d4",
+                            "tertiary": "#242118",
+                            "on-primary-fixed": "#131e16",
+                            "surface-tint": "#556157",
+                            "tertiary-fixed-dim": "#ccc6b9",
+                            "on-error-container": "#93000a",
+                            "on-primary-fixed-variant": "#3d4a40",
+                            "surface-variant": "#e4e2e0",
+                            "surface-container-highest": "#e4e2e0",
+                            "secondary": "#5f5e5b",
+                            "on-surface": "#1b1c1b",
+                            "secondary-container": "#e5e2dd",
+                            "on-tertiary-container": "#a49e93",
+                            "on-tertiary-fixed-variant": "#4a463d",
+                            "tertiary-container": "#39362d",
+                            "surface-container": "#f0edeb",
+                            "on-background": "#1b1c1b",
+                            "outline": "#747873",
+                            "surface-dim": "#dcdad8",
+                            "primary-fixed": "#d8e6d9",
+                            "secondary-fixed": "#e5e2dd",
+                            "inverse-on-surface": "#f3f0ee",
+                            "inverse-primary": "#bccabd",
+                            "background": "#fbf9f7",
+                            "surface": "#fbf9f7",
+                            "surface-container-high": "#eae8e6",
+                            "on-tertiary-fixed": "#1e1b13",
+                            "surface-bright": "#fbf9f7"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "margin-desktop": "40px",
+                            "unit": "8px",
+                            "container-max-width": "1200px",
+                            "gutter": "24px",
+                            "margin-mobile": "20px"
+                        },
+                        "fontFamily": {
+                            "headline-lg": ["EB Garamond"],
+                            "body-md": ["Inter"],
+                            "body-lg": ["Inter"],
+                            "label-caps": ["Inter"],
+                            "display-lg": ["EB Garamond"],
+                            "headline-md": ["EB Garamond"],
+                            "body-sm": ["Inter"]
+                        },
+                        "fontSize": {
+                            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                            "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                        }
+                    }
+                }
+            }
+        </script>
+    <style>
+            body { background-color: #F5F2ED; color: #1b1c1b; }
+            .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+            .filled-icon { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+            .glass-card { background: rgba(250, 249, 246, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(228, 226, 224, 0.5); }
+        </style>
+    </head>
+    <body class="flex flex-col md:flex-row min-h-screen font-body-md bg-background">
+    <!-- Mobile Nav (TopAppBar from Shared Components) -->
+    <header class="md:hidden flex justify-between items-center px-margin-mobile w-full h-16 bg-surface z-50 fixed top-0 left-0 border-b border-surface-variant">
+    <div class="font-headline-md text-headline-md text-primary font-bold">Studio</div>
+    <div class="flex items-center gap-4">
+    <span class="material-symbols-outlined text-secondary cursor-pointer" data-icon="search">search</span>
+    <span class="material-symbols-outlined text-secondary cursor-pointer" data-icon="menu">menu</span>
+    </div>
+    </header>
+    <!-- SideNavBar (Desktop) -->
+    <nav class="hidden md:flex flex-col py-8 px-4 h-screen w-64 fixed left-0 top-0 bg-surface-container-low shadow-sm z-40 border-r border-surface-variant">
+    <div class="mb-12 px-4">
+    <h1 class="font-headline-md text-headline-md text-primary mb-1">Quiet Luxury AI</h1>
+    <p class="font-body-sm text-body-sm text-secondary">Premium Strategist</p>
+    </div>
+    <div class="flex flex-col gap-2 flex-grow">
+    <!-- Tabs -->
+    <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-secondary-container hover:bg-surface-container-high transition-all duration-300 font-label-caps text-label-caps" href="#">
+    <span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+    <span class="">Content Studio</span>
+    </a>
+    <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-primary font-bold border-r-4 border-primary bg-surface-container font-label-caps text-label-caps" href="#">
+    <span class="material-symbols-outlined filled-icon" data-icon="folder_shared">folder_shared</span>
+    <span class="">Artifacts</span>
+    </a>
+    <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-secondary-container hover:bg-surface-container-high transition-all duration-300 font-label-caps text-label-caps" href="#">
+    <span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+    <span class="">Strategy Board</span>
+    </a>
+    <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-secondary-container hover:bg-surface-container-high transition-all duration-300 font-label-caps text-label-caps" href="#">
+    <span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+    <span class="">Brand Library</span>
+    </a>
+    </div>
+    <div class="mt-auto flex flex-col gap-2 pt-8 border-t border-surface-variant">
+    <button class="w-full py-2 px-4 bg-primary text-on-primary rounded-lg font-label-caps text-label-caps hover:bg-primary-container transition-colors mb-4">
+                    Upgrade to Pro
+                </button>
+    <a class="flex items-center gap-3 px-4 py-2 text-on-secondary-container hover:text-primary transition-colors font-label-caps text-label-caps" href="#">
+    <span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+    <span class="">Help</span>
+    </a>
+    <a class="flex items-center gap-3 px-4 py-2 text-on-secondary-container hover:text-primary transition-colors font-label-caps text-label-caps" href="#">
+    <span class="material-symbols-outlined" data-icon="logout">logout</span>
+    <span class="">Sign Out</span>
+    </a>
+    </div>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main class="flex-1 md:ml-64 pt-20 md:pt-12 px-margin-mobile md:px-margin-desktop pb-24 max-w-container-max-width mx-auto w-full">
+    <!-- Header Section -->
+    <header class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+    <div>
+    <div class="flex items-center gap-2 mb-3">
+    <span class="px-2 py-1 border border-outline-variant rounded font-body-sm text-body-sm text-secondary">Strategy Document</span>
+    <span class="px-2 py-1 border border-outline-variant rounded font-body-sm text-body-sm text-secondary">Generated Dec 12</span>
+    </div>
+    <h2 class="font-display-lg text-display-lg text-primary mb-2">Aura Blanc: <span class="italic">Brand Identity</span></h2>
+    <p class="font-body-lg text-body-lg text-secondary max-w-2xl">A comprehensive strategic overview defining the core narrative, target audience demographics, and visual positioning for the upcoming launch.</p>
+    </div>
+    <div class="flex gap-3">
+    <button class="flex items-center gap-2 px-4 py-2 border border-outline-variant rounded-lg font-label-caps text-label-caps text-primary hover:bg-surface-variant transition-colors">
+    <span class="material-symbols-outlined" data-icon="download">download</span>
+                        Export
+                    </button>
+    <button class="flex items-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg font-label-caps text-label-caps hover:bg-primary-container transition-colors">
+    <span class="material-symbols-outlined" data-icon="edit">edit</span>
+                        Edit Strategy
+                    </button>
+    </div>
+    </header>
+    <!-- Bento Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+    <!-- Strategy Overview (Spans 8 cols) -->
+    <section class="md:col-span-8 glass-card rounded-xl p-8 shadow-sm">
+    <div class="flex items-center gap-3 mb-6 border-b border-surface-variant pb-4">
+    <span class="material-symbols-outlined text-primary" data-icon="description">description</span>
+    <h3 class="font-headline-md text-headline-md text-primary">Strategy Overview</h3>
+    </div>
+    <div class="space-y-6">
+    <div>
+    <h4 class="font-label-caps text-label-caps text-secondary mb-2 uppercase tracking-wider">Core Narrative</h4>
+    <p class="font-body-md text-body-md text-on-surface leading-relaxed">Aura Blanc positions itself at the intersection of minimalist design and sustainable luxury. The brand speaks to a demographic that values provenance over prominence. Our narrative centers on <span class="italic">'Quiet Confidence'</span>—the idea that true quality doesn't need to shout to be recognized.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="p-4 bg-surface-container-lowest rounded-lg border border-surface-variant">
+    <h4 class="font-label-caps text-label-caps text-secondary mb-2">Brand Archetype</h4>
+    <p class="font-headline-md text-headline-md text-primary mb-1">The Sage</p>
+    <p class="font-body-sm text-body-sm text-secondary">Knowledgeable, reflective, and seeking truth through simplicity.</p>
+    </div>
+    <div class="p-4 bg-surface-container-lowest rounded-lg border border-surface-variant">
+    <h4 class="font-label-caps text-label-caps text-secondary mb-2">Tone of Voice</h4>
+    <p class="font-headline-md text-headline-md text-primary mb-1 italic">Measured &amp; Poetic</p>
+    <p class="font-body-sm text-body-sm text-secondary">Authoritative yet gentle. Using space and silence as effectively as words.</p>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- Market Insights (Spans 4 cols) -->
+    <section class="md:col-span-4 glass-card rounded-xl p-8 shadow-sm flex flex-col">
+    <div class="flex items-center gap-3 mb-6 border-b border-surface-variant pb-4">
+    <span class="material-symbols-outlined text-primary" data-icon="pie_chart">pie_chart</span>
+    <h3 class="font-headline-md text-headline-md text-primary">Market Insights</h3>
+    </div>
+    <div class="flex-1 flex flex-col justify-between">
+    <div class="mb-6">
+    <h4 class="font-label-caps text-label-caps text-secondary mb-4 uppercase tracking-wider">Audience Demographics</h4>
+    <!-- Minimalist Bar Graph -->
+    <div class="space-y-4">
+    <div>
+    <div class="flex justify-between font-body-sm text-body-sm mb-1">
+    <span class="text-on-surface">Professionals (28-45)</span>
+    <span class="text-secondary">45%</span>
+    </div>
+    <div class="w-full bg-surface-variant rounded-full h-1.5">
+    <div class="bg-primary h-1.5 rounded-full" style="width: 45%"></div>
+    </div>
+    </div>
+    <div>
+    <div class="flex justify-between font-body-sm text-body-sm mb-1">
+    <span class="text-on-surface">Design Enthusiasts</span>
+    <span class="text-secondary">30%</span>
+    </div>
+    <div class="w-full bg-surface-variant rounded-full h-1.5">
+    <div class="bg-surface-tint h-1.5 rounded-full" style="width: 30%"></div>
+    </div>
+    </div>
+    <div>
+    <div class="flex justify-between font-body-sm text-body-sm mb-1">
+    <span class="text-on-surface">Sustainable Shoppers</span>
+    <span class="text-secondary">25%</span>
+    </div>
+    <div class="w-full bg-surface-variant rounded-full h-1.5">
+    <div class="bg-outline h-1.5 rounded-full" style="width: 25%"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="p-4 bg-surface-container-lowest rounded-lg border border-surface-variant mt-auto">
+    <p class="font-body-sm text-body-sm text-secondary italic">
+                                "The target audience prioritizes longevity and aesthetic restraint over fast trends, showing a 30% higher willingness to invest in 'heritage' pieces."
+                            </p>
+    </div>
+    </div>
+    </section>
+    <!-- Mock Brand Posts (Spans 12 cols) -->
+    <section class="md:col-span-12 glass-card rounded-xl p-8 shadow-sm mt-8">
+    <div class="flex items-center gap-3 mb-8 border-b border-surface-variant pb-4">
+    <span class="material-symbols-outlined text-primary" data-icon="photo_library">photo_library</span>
+    <h3 class="font-headline-md text-headline-md text-primary">Mock Brand Posts</h3>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Post 1 -->
+    <div class="group cursor-pointer">
+    <div class="aspect-square bg-surface-variant mb-4 overflow-hidden rounded-lg">
+    <img alt="Minimalist interior design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 mix-blend-multiply" data-alt="A highly curated, minimalist interior space featuring a single sculptural ceramic vase on a raw stone plinth. The lighting is soft and natural, casting long, elegant shadows across a polished concrete floor. The color palette is strictly neutral: creams, warm grays, and a touch of deep charcoal. The mood is serene, sophisticated, and deeply grounded, reflecting a quiet luxury aesthetic perfect for a high-end brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgbMlN73Saw5QOcdlxfvOH0ASfNoo9RZ96R2iIAQaTpPanQElcIA8O3Avl87skQVpcEPTPFO0B7EL0CBLKcwTOR0RhmiaK8QLGAuRGCFrLFH4fWF7ThU9MMXZptNxCKshIxxS3xBdrH4w_EP0ucvJnNKnz9YIC0j-lTH8SCC3-KdiKQVcEYQ-Tx63S1toUgTOQTZI4yTa7zMDrGGkQcxvzGFDZTDoLvEMlsFcbGUixoABm46onyUyMvmqfUROW9amErs5Ba1hSStNL">
+    </div>
+    <p class="font-body-sm text-body-sm text-on-surface line-clamp-3 mb-2">
+                                Form follows feeling. Introducing the foundational collection. Pieces designed not to demand attention, but to hold it softly. Available tomorrow. #AuraBlanc #QuietLuxury
+                            </p>
+    <p class="font-label-caps text-label-caps text-secondary">Instagram • 1080x1080</p>
+    </div>
+    <!-- Post 2 -->
+    <div class="group cursor-pointer">
+    <div class="aspect-[4/5] bg-surface-variant mb-4 overflow-hidden rounded-lg">
+    <img alt="Close up of fabric texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 mix-blend-multiply" data-alt="An extreme macro close-up of luxurious, woven linen fabric in an off-white, champagne tone. The texture is tactile and rich, highlighting the natural imperfections and organic weave of the material. Soft, directional lighting emphasizes the depth and quality of the textile. The overall mood is intimate and premium, conveying a sense of enduring craftsmanship aligned with a minimalist, high-end strategy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0JW-rkP6WGSncnjzPPZcHt-boEBi-q0GB0RlCMzlJaWjeSIP-05k10PYYmVL7pdg8CK8sBD35Eoc9Pxa7dBp4FJg6c0gZbJVkkIDNm0qhJRL-mNuoCHDKNgilozmcS-ZsjKL-RquE9U3vFDJD745Ghvqbg1YoGMqKKymmUA5jAttu9kBVaVZBI6lcK8Yj8EKh7YUElBz-ARY79VVf3BJRmuN8UTpvOHGJ5i_GTeKeOtaREDsftA_SRV5uZoEi7MraC0WhKWSnsLkA">
+    </div>
+    <p class="font-body-sm text-body-sm text-on-surface line-clamp-3 mb-2">
+                                The details are not the details. They make the design. A closer look at the organic textures that define our new season approach. 
+                            </p>
+    <p class="font-label-caps text-label-caps text-secondary">Pinterest • 1000x1500</p>
+    </div>
+    <!-- Post 3 -->
+    <div class="group cursor-pointer">
+    <div class="aspect-video bg-surface-variant mb-4 overflow-hidden rounded-lg flex items-center justify-center relative">
+    <img alt="Abstract shadow architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 mix-blend-multiply absolute inset-0" data-alt="A striking architectural detail showing sharp, geometric shadows cast against a smooth, cream-colored wall. The composition is highly asymmetric and relies on negative space to create tension and visual interest. The lighting is bright but diffused, representing a bright, modern light-mode aesthetic. The mood is intellectual and refined, perfectly suited for a strategic brand announcement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChr-nsGCGyHyxKW2STZL2kUFC-a5Fsji01d4QgVxuk7oOnsESbaTqH4d_r1KPqt1uig3JYG1Dx0a1Ja8hY0uEt-ZW44LGpdNL5C1-fJtATcYWt0bndcfyyoPPSMuKOmIOPwdoMELN-GRa3ZNqNF-VWWU6f_1JUQ1hOXN3a2HA2OLyvWePYXTmoiYmCb9N11OAEpgvZ65SggwkUzND-1bLN8A4IG4vf-Up4Vh3duMxgtBNOmgNNA_pdEFzVfmg9E3Wn3fwUuJmJR_q1">
+    <div class="absolute inset-0 flex items-center justify-center bg-black/10">
+    <span class="material-symbols-outlined text-white text-4xl" data-icon="play_circle">play_circle</span>
+    </div>
+    </div>
+    <p class="font-body-sm text-body-sm text-on-surface line-clamp-3 mb-2">
+                                A conversation with our lead designer on the philosophy of restraint. Watch the full editorial short on our site.
+                            </p>
+    <p class="font-label-caps text-label-caps text-secondary">LinkedIn/Twitter • 1920x1080</p>
+    </div>
+    </div>
+    </section>
+    </div>
+    </main>
+    <!-- Mobile BottomNav (Suppressed as per rules: This is a specific detailed view, not a top level destination, though 'Artifacts' implies it might be a main section. Assuming it's a detail view of an artifact based on "Aura Blanc: Brand Identity", so BottomNav is hidden. If it were the main 'Artifacts' list, it would be shown. Given the deep link nature, omitting.) -->
+    
+    
+    </body></html>
