@@ -1,0 +1,10 @@
+openai>=1.0.0
+sendgrid>=6.9.7
+typing-extensions>=4.0.0 
+requests>=2.31.0
+sounddevice>=0.4.6
+numpy>=1.26.4
+scipy>=1.13.0
+SpeechRecognition>=3.10.0
+pygame>=2.5.2
+pyaudio; platform_system == "Windows"

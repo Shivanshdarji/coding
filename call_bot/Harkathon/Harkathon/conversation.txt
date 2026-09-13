@@ -1,0 +1,35 @@
+AI: Hello! I can help you book a hotel. When are you planning to check in and out?
+
+H: I want to check in on June 10th and check out on June 13th.
+
+AI: Got it. How many guests will be staying?
+
+H: Just 2 of us.
+
+AI: Great! Do you have a preferred hotel or room type?
+
+H: Not really a hotel, but I'd like a Deluxe room if available.
+
+AI: Okay, let me check... ✅ A Deluxe room is available at Oceanview Resort for those dates. The total comes to ₹14,500 for 2 guests. Shall I go ahead and book it?
+
+H: Yes, please book it.
+
+AI: Perfect! Can I have your name and email to finalize the booking?
+
+H: Sure, it's Naiteek Choksi and my email is naiteekchoksi@gmail.com.
+
+AI: Awesome! Your booking is confirmed. Here are the details:
+
+Hotel: Oceanview Resort
+Room Type: Deluxe
+Guests: 2
+Check-in: June 10, 2025
+Check-out: June 13, 2025
+Total Price: ₹14,500
+Booking Reference: OVR-56289XZ
+
+Would you like to add any special requests?
+
+H: Nope, all good.
+
+AI: Great! A confirmation email has been sent to naiteekchoksi@gmail.com. Have a fantastic stay! 

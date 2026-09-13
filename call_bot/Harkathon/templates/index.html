@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talking Bot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .pixel-circle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            image-rendering: pixelated;
+            box-shadow: 
+                0 0 15px rgba(255, 215, 0, 0.3),
+                inset 0 0 10px rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+
+        .pixel-circle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 4px,
+                rgba(0, 0, 0, 0.1) 4px,
+                rgba(0, 0, 0, 0.1) 8px
+            );
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+
+        .pixel-circle.animate {
+            animation: rotate3D 1s ease;
+        }
+
+        @keyframes rotate3D {
+            0% { transform: perspective(1000px) rotateY(0deg); }
+            50% { transform: perspective(1000px) rotateY(180deg); }
+            100% { transform: perspective(1000px) rotateY(360deg); }
+        }
+
+        .bot-message {
+            background-color: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            padding: 15px 25px;
+            border-radius: 15px;
+            margin: 10px 0;
+            max-width: 80%;
+            text-align: center;
+            color: #FFD700;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            color: #FFD700;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="pixel-circle" id="pixelCircle"></div>
+    <div id="botMessages" class="mt-8"></div>
+    <div id="statusMessage" class="mt-4 text-yellow-500"></div>
+    <div class="footer">Made by Team Hogwarts</div>
+
+    <script>
+        const pixelCircle = document.getElementById('pixelCircle');
+        const botMessages = document.getElementById('botMessages');
+        const statusMessage = document.getElementById('statusMessage');
+        let isAnimating = false;
+
+        function addBotMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'bot-message';
+            messageDiv.textContent = message;
+            botMessages.appendChild(messageDiv);
+        }
+
+        pixelCircle.addEventListener('click', async function() {
+            if (!isAnimating) {
+                isAnimating = true;
+                this.classList.add('animate');
+                
+                try {
+                    statusMessage.textContent = 'Bot is thinking...';
+                    const response = await fetch('/api/talk', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            action: 'start'
+                        })
+                    });
+                    
+                    let data;
+                    try {
+                        data = await response.json();
+                    } catch (e) {
+                        data = { message: "Hello! I'm your talking bot. How can I help you today?" };
+                    }
+                    
+                    if (response.ok) {
+                        addBotMessage(data.message || 'Hello! How can I help you today?');
+                        statusMessage.textContent = '';
+                    } else {
+                        let errorMessage = data.error || 'Something went wrong';
+                        if (response.status === 503) {
+                            errorMessage = 'Backend server is not running. Please start the backend server.';
+                        } else if (response.status === 504) {
+                            errorMessage = 'Backend server is taking too long to respond. Please try again.';
+                        }
+                        statusMessage.textContent = 'Error: ' + errorMessage;
+                        statusMessage.classList.add('text-red-500');
+                        setTimeout(() => {
+                            statusMessage.classList.remove('text-red-500');
+                        }, 3000);
+                    }
+                } catch (error) {
+                    statusMessage.textContent = 'Error: ' + error.message;
+                }
+
+                setTimeout(() => {
+                    this.classList.remove('animate');
+                    isAnimating = false;
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html> 
